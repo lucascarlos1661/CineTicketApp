@@ -4,30 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="4dp"
-    android:elevation="2dp">
+    android:layout_marginBottom="12dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="8dp">
 
         <ImageView
             android:id="@+id/movie_banner"
             android:layout_width="150dp"
-            android:layout_height="230dp"
+            android:layout_height="220dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/movie_title"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="Homem aranha sem volta para casa"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="50dp"
             android:textColor="@color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/movie_banner"
-            app:layout_constraintTop_toTopOf="@+id/movie_banner" />
+            app:layout_constraintTop_toTopOf="@+id/movie_banner"
+            tools:text="@string/movie_title" />
+
+        <TextView
+            android:id="@+id/run_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/run_time"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/movie_title"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+        <TextView
+            android:id="@+id/movie_run_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@id/run_time"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title"
+            app:layout_constraintTop_toTopOf="@id/run_time"
+            tools:text="02h28" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/genre"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/run_time"
+            app:layout_constraintTop_toBottomOf="@id/run_time" />
+
+        <TextView
+            android:id="@+id/movie_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@+id/genre"
+            app:layout_constraintTop_toTopOf="@id/genre"
+            tools:text="@string/movie_genre" />
+
+        <TextView
+            android:id="@+id/movie_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="@id/genre"
+            app:layout_constraintTop_toBottomOf="@id/genre"
+            tools:text="4,5" />
+
+        <ImageView
+            android:id="@+id/ic_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:contentDescription="@string/rate_description"
+            android:src="@drawable/ic_star_rate"
+            app:layout_constraintBottom_toBottomOf="@id/movie_rate"
+            app:layout_constraintLeft_toRightOf="@id/movie_rate"
+            app:layout_constraintTop_toTopOf="@id/movie_rate" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_age"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="@id/movie_rate"
+            app:layout_constraintTop_toBottomOf="@id/movie_rate" />
+
+        <TextView
+            android:id="@+id/movie_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toRightOf="@+id/age"
+            app:layout_constraintTop_toTopOf="@+id/age"
+            tools:text="12" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/movie_story_line"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_info"
+            android:text="@string/btn_story_line_movie"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:iconGravity="start"
+            app:layout_constraintLeft_toLeftOf="@+id/age"
+            app:layout_constraintTop_toBottomOf="@id/age" />
+
+        <Button
+            android:id="@+id/btn_buy_ticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/btn_buy_ticket"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/movie_banner" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

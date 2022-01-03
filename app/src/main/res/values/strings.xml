@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Cine Ticket</string>
+    <string name="movie_title">Homem Aranha sem volta para casa</string>
+    <string name="run_time">Duração: </string>
+    <string name="genre">Gênero: </string>
+    <string name="movie_genre">Ação</string>
+    <string name="rate_description">Icone de classificação do filme</string>
+    <string name="movie_age">Classificação:</string>
+    <string name="btn_buy_ticket">Comprar Ingresso</string>
+    <string name="btn_story_line_movie">Sinopse</string>
 </resources>

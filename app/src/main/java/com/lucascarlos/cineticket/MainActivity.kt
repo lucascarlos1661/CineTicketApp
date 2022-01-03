@@ -2,9 +2,11 @@ package com.lucascarlos.cineticket
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
 import com.lucascarlos.cineticket.api.MyRetrofit
 import com.lucascarlos.cineticket.model.Movies
 import com.lucascarlos.cineticket.model.MoviesAdapter
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<List<Movies>>, t: Throwable) {
                 Toast.makeText(this@MainActivity, t.message, Toast.LENGTH_LONG).show()
+                t?.message?.let { Log.e("erro", it) }
             }
 
         })
