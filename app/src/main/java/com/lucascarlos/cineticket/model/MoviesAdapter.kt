@@ -8,13 +8,17 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.lucascarlos.cineticket.R
 
 class MoviesAdapter(private val context: Context, private val moviesList: List<Movies>) :
     RecyclerView.Adapter<MoviesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder =
-        MoviesViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.movie_item, parent, false))
+        MoviesViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.movie_item, parent, false)
+        )
 
     override fun getItemCount(): Int = moviesList.size
 
@@ -26,6 +30,14 @@ class MoviesAdapter(private val context: Context, private val moviesList: List<M
         holder.movieRate.text = item.rating
         holder.movieAge.text = item.age
         Glide.with(context).load(item.posterUrl).into(holder.movieBanner)
+
+        holder.btnSynopsis.setOnClickListener {
+            MaterialAlertDialogBuilder(context)
+                .setTitle(item.title)
+                .setMessage(item.storyLine)
+                .setPositiveButton("Ok") { _, _ -> }
+                .show()
+        }
     }
 }
 
@@ -36,5 +48,6 @@ class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val movieGenre: TextView = itemView.findViewById(R.id.movie_genre)
     val movieRate: TextView = itemView.findViewById(R.id.movie_rate)
     val movieAge: TextView = itemView.findViewById(R.id.movie_age)
+    val btnSynopsis: MaterialButton = itemView.findViewById((R.id.movie_story_line))
 }
 
