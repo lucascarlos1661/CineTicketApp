@@ -11,7 +11,7 @@ class MyRetrofit {
     }
 
     companion object {
-        private const val BASE_URL = "https://api.npoint.io/"
+        private const val BASE_URL = "http://192.168.1.16:3000/"
 
         var myRetrofit: MyRetrofit? = null
 

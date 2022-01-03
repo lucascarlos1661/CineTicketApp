@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface MoviesApi {
-    @GET("e5c64ffbc5d94264260d")
+    @GET("movies")
     fun getMoviesApi(): Call<List<Movies>>
 }
