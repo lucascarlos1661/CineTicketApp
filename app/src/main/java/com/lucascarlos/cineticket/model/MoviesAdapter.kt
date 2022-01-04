@@ -1,6 +1,7 @@
 package com.lucascarlos.cineticket.model
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,6 +39,11 @@ class MoviesAdapter(private val context: Context, private val moviesList: List<M
                 .setPositiveButton("Ok") { _, _ -> }
                 .show()
         }
+
+        var rooms: Array<Rooms> = item.rooms
+
+        holder.room.text = rooms[0].toString()
+
     }
 }
 
@@ -49,5 +55,6 @@ class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val movieRate: TextView = itemView.findViewById(R.id.movie_rate)
     val movieAge: TextView = itemView.findViewById(R.id.movie_age)
     val btnSynopsis: MaterialButton = itemView.findViewById((R.id.movie_story_line))
+    val room: TextView = itemView.findViewById(R.id.horario)
 }
 

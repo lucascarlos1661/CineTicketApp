@@ -132,6 +132,16 @@
             android:textAllCaps="false"
             app:layout_constraintTop_toBottomOf="@id/movie_banner" />
 
+        <TextView
+            android:id="@+id/horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="horarios"
+            app:layout_constraintEnd_toEndOf="@+id/btn_buy_ticket"
+            app:layout_constraintStart_toStartOf="@+id/btn_buy_ticket"
+            app:layout_constraintTop_toBottomOf="@+id/btn_buy_ticket" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
