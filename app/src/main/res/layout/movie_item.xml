@@ -17,12 +17,13 @@
             android:id="@+id/movie_banner"
             android:layout_width="150dp"
             android:layout_height="220dp"
+            android:contentDescription="@string/banner_description"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/movie_title"
-            android:layout_width="200dp"
+            android:layout_width="215dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:layout_marginBottom="50dp"
@@ -34,15 +35,35 @@
             tools:text="@string/movie_title" />
 
         <TextView
+            android:id="@+id/movie_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/run_time"
+            app:layout_constraintLeft_toLeftOf="@+id/movie_title"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title"
+            tools:text="4,5" />
+
+        <ImageView
+            android:id="@+id/ic_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:contentDescription="@string/rate_description"
+            android:src="@drawable/ic_star_rate"
+            app:layout_constraintBottom_toBottomOf="@id/movie_rate"
+            app:layout_constraintLeft_toRightOf="@id/movie_rate"
+            app:layout_constraintTop_toTopOf="@id/movie_rate" />
+
+        <TextView
             android:id="@+id/run_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:text="@string/run_time"
             android:textColor="@color/black"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="@+id/movie_title"
-            app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+            app:layout_constraintTop_toBottomOf="@+id/movie_rate" />
 
         <TextView
             android:id="@+id/movie_run_time"
@@ -74,32 +95,14 @@
             tools:text="@string/movie_genre" />
 
         <TextView
-            android:id="@+id/movie_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            app:layout_constraintLeft_toLeftOf="@id/genre"
-            app:layout_constraintTop_toBottomOf="@id/genre"
-            tools:text="4,5" />
-
-        <ImageView
-            android:id="@+id/ic_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="16dp"
-            android:contentDescription="@string/rate_description"
-            android:src="@drawable/ic_star_rate"
-            app:layout_constraintBottom_toBottomOf="@id/movie_rate"
-            app:layout_constraintLeft_toRightOf="@id/movie_rate"
-            app:layout_constraintTop_toTopOf="@id/movie_rate" />
-
-        <TextView
             android:id="@+id/age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/movie_age"
             android:textColor="@color/black"
-            app:layout_constraintLeft_toLeftOf="@id/movie_rate"
-            app:layout_constraintTop_toBottomOf="@id/movie_rate" />
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@+id/genre"
+            app:layout_constraintTop_toBottomOf="@+id/genre" />
 
         <TextView
             android:id="@+id/movie_age"
@@ -115,13 +118,53 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
             android:drawableLeft="@drawable/ic_info"
             android:text="@string/btn_story_line_movie"
             android:textAllCaps="false"
             android:textColor="@color/black"
             app:iconGravity="start"
-            app:layout_constraintLeft_toLeftOf="@+id/age"
+            app:layout_constraintBottom_toBottomOf="@+id/movie_banner"
+            app:layout_constraintStart_toStartOf="@+id/schedules" />
+
+        <TextView
+            android:id="@+id/schedules"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/schedules"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/age"
             app:layout_constraintTop_toBottomOf="@id/age" />
+
+        <TextView
+            android:id="@+id/movie_schedules"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/schedules"
+            app:layout_constraintTop_toTopOf="@+id/schedules"
+            tools:text="12:00, 13:00" />
+
+        <TextView
+            android:id="@+id/audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/audio"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/age"
+            app:layout_constraintTop_toBottomOf="@+id/age" />
+
+        <TextView
+            android:id="@+id/movie_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/audio"
+            app:layout_constraintTop_toTopOf="@+id/audio"
+            tools:text="@string/movie_audio_hint" />
 
         <Button
             android:id="@+id/btn_buy_ticket"
@@ -131,16 +174,6 @@
             android:text="@string/btn_buy_ticket"
             android:textAllCaps="false"
             app:layout_constraintTop_toBottomOf="@id/movie_banner" />
-
-        <TextView
-            android:id="@+id/horario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="horarios"
-            app:layout_constraintEnd_toEndOf="@+id/btn_buy_ticket"
-            app:layout_constraintStart_toStartOf="@+id/btn_buy_ticket"
-            app:layout_constraintTop_toBottomOf="@+id/btn_buy_ticket" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

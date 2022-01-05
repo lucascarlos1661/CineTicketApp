@@ -8,4 +8,8 @@
     <string name="movie_age">Classificação:</string>
     <string name="btn_buy_ticket">Comprar Ingresso</string>
     <string name="btn_story_line_movie">Sinopse</string>
+    <string name="schedules">Horários: </string>
+    <string name="audio">Áudio: </string>
+    <string name="movie_audio_hint">Dublado, Legendado</string>
+    <string name="banner_description">Imagem do banner do filme</string>
 </resources>

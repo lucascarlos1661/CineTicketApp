@@ -40,10 +40,17 @@ class MoviesAdapter(private val context: Context, private val moviesList: List<M
                 .show()
         }
 
-        var rooms: Array<Rooms> = item.rooms
+        val rooms: List<Rooms> = item.rooms
+        var roomsAudio = mutableListOf<String>()
+        var roomsSchedules: List<String> = emptyList()
 
-        holder.room.text = rooms[0].toString()
+        for (i in rooms) {
+            roomsAudio.add(i.audio)
+            roomsSchedules = roomsSchedules + i.schedules
+        }
 
+        holder.movieSchedules.text = roomsSchedules.distinct().joinToString(separator = ", ")
+        holder.movieAudio.text = roomsAudio.distinct().joinToString(separator = ", ")
     }
 }
 
@@ -55,6 +62,7 @@ class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val movieRate: TextView = itemView.findViewById(R.id.movie_rate)
     val movieAge: TextView = itemView.findViewById(R.id.movie_age)
     val btnSynopsis: MaterialButton = itemView.findViewById((R.id.movie_story_line))
-    val room: TextView = itemView.findViewById(R.id.horario)
+    val movieSchedules: TextView = itemView.findViewById(R.id.movie_schedules)
+    val movieAudio: TextView = itemView.findViewById(R.id.movie_audio)
 }
 
