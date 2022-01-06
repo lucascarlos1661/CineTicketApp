@@ -1,4 +1,4 @@
-package com.lucascarlos.cineticket
+package com.lucascarlos.cineticket.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.button.MaterialButton
+import com.lucascarlos.cineticket.R
 import com.lucascarlos.cineticket.api.MyRetrofit
 import com.lucascarlos.cineticket.model.Movies
 import com.lucascarlos.cineticket.model.MoviesAdapter
