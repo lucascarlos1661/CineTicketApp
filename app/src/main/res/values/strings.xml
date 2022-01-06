@@ -12,4 +12,5 @@
     <string name="audio">Áudio: </string>
     <string name="movie_audio_hint">Dublado, Legendado</string>
     <string name="banner_description">Imagem do banner do filme</string>
+    <string name="choose_date">Escolha uma data</string>
 </resources>
