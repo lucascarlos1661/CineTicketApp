@@ -1,10 +1,11 @@
 package com.lucascarlos.cineticket.model
 
 import android.content.Context
-import android.util.Log
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.lucascarlos.cineticket.R
+import com.lucascarlos.cineticket.view.BuyTicket
 
 class MoviesAdapter(private val context: Context, private val moviesList: List<Movies>) :
     RecyclerView.Adapter<MoviesViewHolder>() {
@@ -51,6 +53,17 @@ class MoviesAdapter(private val context: Context, private val moviesList: List<M
 
         holder.movieSchedules.text = roomsSchedules.distinct().joinToString(separator = ", ")
         holder.movieAudio.text = roomsAudio.distinct().joinToString(separator = ", ")
+
+        holder.btnBuyTicket.setOnClickListener {
+            val intent = Intent(context, BuyTicket::class.java)
+            intent.putExtra("bannerUrl", item.bannerUrl)
+            intent.putExtra("posterUrl", item.posterUrl)
+            intent.putExtra("movieTitle", item.title)
+            intent.putExtra("movieRate", item.rating)
+            intent.putExtra("runTime", item.runTime)
+            intent.putExtra("movieGenre", item.genre)
+            context.startActivity(intent)
+        }
     }
 }
 
@@ -64,5 +77,6 @@ class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val btnSynopsis: MaterialButton = itemView.findViewById((R.id.movie_story_line))
     val movieSchedules: TextView = itemView.findViewById(R.id.movie_schedules)
     val movieAudio: TextView = itemView.findViewById(R.id.movie_audio)
+    val btnBuyTicket: Button = itemView.findViewById(R.id.btn_buy_ticket)
 }
 
