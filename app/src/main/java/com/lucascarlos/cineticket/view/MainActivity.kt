@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<List<Movies>>, t: Throwable) {
                 Toast.makeText(this@MainActivity, t.message, Toast.LENGTH_LONG).show()
-                t?.message?.let { Log.e("erro", it) }
+                t.message?.let { Log.e("Err", it) }
             }
 
         })
