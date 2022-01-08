@@ -20,7 +20,5 @@ data class Movies(
     @SerializedName("posterUrl")
     val posterUrl: String,
     @SerializedName("bannerUrl")
-    val bannerUrl: String,
-    @SerializedName("rooms")
-    val rooms: List<Rooms>
+    val bannerUrl: String
 )
