@@ -107,5 +107,16 @@
         android:background="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/txt_choose_date" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleDates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/line"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        tools:itemCount="7"
+        tools:listitem="@layout/dates_item" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
