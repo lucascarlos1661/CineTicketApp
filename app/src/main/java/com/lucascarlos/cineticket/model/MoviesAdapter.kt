@@ -42,9 +42,10 @@ class MoviesAdapter(private val context: Context, private val moviesList: List<M
                 .show()
         }
 
-        val rooms: List<Rooms> = item.rooms
+        /*val rooms: List<Days> = item.rooms
         var roomsAudio = mutableListOf<String>()
         var roomsSchedules: List<String> = emptyList()
+
 
         for (i in rooms) {
             roomsAudio.add(i.audio)
@@ -52,10 +53,11 @@ class MoviesAdapter(private val context: Context, private val moviesList: List<M
         }
 
         holder.movieSchedules.text = roomsSchedules.distinct().joinToString(separator = ", ")
-        holder.movieAudio.text = roomsAudio.distinct().joinToString(separator = ", ")
+        holder.movieAudio.text = roomsAudio.distinct().joinToString(separator = ", ")*/
 
         holder.btnBuyTicket.setOnClickListener {
             val intent = Intent(context, BuyTicket::class.java)
+            intent.putExtra("movieId", item.id)
             intent.putExtra("bannerUrl", item.bannerUrl)
             intent.putExtra("posterUrl", item.posterUrl)
             intent.putExtra("movieTitle", item.title)
