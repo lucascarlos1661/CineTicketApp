@@ -5,9 +5,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MyRetrofit {
 
-    private val retrofit: Retrofit
+    private val retrofit: Retrofit = Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
+        .build()
+
     fun moviesApi(): MoviesApi {
         return retrofit.create(MoviesApi::class.java)
+    }
+
+    fun datesApi(): DatesApi {
+        return retrofit.create(DatesApi::class.java)
     }
 
     companion object {
@@ -25,9 +31,4 @@ class MyRetrofit {
             }
     }
 
-    init {
-        retrofit =
-            Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create())
-                .build()
-    }
 }
