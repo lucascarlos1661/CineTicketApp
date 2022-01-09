@@ -13,4 +13,10 @@
     <string name="movie_audio_hint">Dublado, Legendado</string>
     <string name="banner_description">Imagem do banner do filme</string>
     <string name="choose_date">Escolha uma data</string>
+    <string name="text_room">Sala:</string>
+    <string name="text_number_room">06</string>
+    <string name="text_room_audio">Dublado</string>
+    <string name="movies">Em cartaz</string>
+    <string name="coming_soon">Vem aí</string>
+    <string name="my_tickets">Meus ingressos</string>
 </resources>
