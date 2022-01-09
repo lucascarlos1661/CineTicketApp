@@ -1,7 +1,6 @@
 package com.lucascarlos.cineticket.model
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,8 +21,6 @@ class RoomAdapter(private val context: Context, private val roomsList: List<Room
 
         holder.roomNumber.text = item.number
         holder.roomAudio.text = item.audio
-
-        Log.e("teste", item.schedules.toString())
 
         setSchedulesItemRecycler(holder.recyclerSchedules, item.schedules.toList())
     }

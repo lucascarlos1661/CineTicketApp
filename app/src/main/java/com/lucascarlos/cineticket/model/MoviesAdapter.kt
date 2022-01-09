@@ -42,19 +42,6 @@ class MoviesAdapter(private val context: Context, private val moviesList: List<M
                 .show()
         }
 
-        /*val rooms: List<Days> = item.rooms
-        var roomsAudio = mutableListOf<String>()
-        var roomsSchedules: List<String> = emptyList()
-
-
-        for (i in rooms) {
-            roomsAudio.add(i.audio)
-            roomsSchedules = roomsSchedules + i.schedules
-        }
-
-        holder.movieSchedules.text = roomsSchedules.distinct().joinToString(separator = ", ")
-        holder.movieAudio.text = roomsAudio.distinct().joinToString(separator = ", ")*/
-
         holder.btnBuyTicket.setOnClickListener {
             val intent = Intent(context, BuyTicket::class.java)
             intent.putExtra("movieId", item.id)
@@ -77,8 +64,6 @@ class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val movieRate: TextView = itemView.findViewById(R.id.movie_rate)
     val movieAge: TextView = itemView.findViewById(R.id.movie_age)
     val btnSynopsis: MaterialButton = itemView.findViewById((R.id.movie_story_line))
-    val movieSchedules: TextView = itemView.findViewById(R.id.movie_schedules)
-    val movieAudio: TextView = itemView.findViewById(R.id.movie_audio)
     val btnBuyTicket: Button = itemView.findViewById(R.id.btn_buy_ticket)
 }
 

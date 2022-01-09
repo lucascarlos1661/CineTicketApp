@@ -1,7 +1,6 @@
 package com.lucascarlos.cineticket.model
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +20,6 @@ class SchedulesAdapter(private val context: Context, private val schedulesList: 
 
     override fun onBindViewHolder(holder: SchedulesViewHolder, position: Int) {
         val item = schedulesList[position]
-        Log.e("item", item.toString())
         holder.schedule.text = item
     }
 
