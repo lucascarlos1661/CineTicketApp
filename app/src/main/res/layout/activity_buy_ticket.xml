@@ -10,9 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/banner_description"
         android:scaleType="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_banner"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -21,9 +23,19 @@
         android:layout_height="190dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="-30dp"
-        android:contentDescription="@string/banner_description"
+        android:contentDescription="@string/poster_description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/movie_banner" />
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/back_button_description"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/movie_title"
@@ -44,7 +56,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/run_time"
         app:layout_constraintLeft_toLeftOf="@+id/movie_title"
         app:layout_constraintTop_toBottomOf="@+id/movie_title"
         tools:text="4,5" />
@@ -73,7 +84,7 @@
         android:id="@+id/separator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="  |  "
+        android:text="@string/txt_separator"
         app:layout_constraintLeft_toRightOf="@id/movie_run_time"
         app:layout_constraintTop_toTopOf="@id/movie_run_time" />
 

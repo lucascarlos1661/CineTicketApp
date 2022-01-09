@@ -26,6 +26,7 @@ class BuyTicket : AppCompatActivity() {
 
     lateinit var recycleDates: RecyclerView
     lateinit var recycleRooms: RecyclerView
+    lateinit var backButton: ImageView
     private var daysList: List<Days> = emptyList()
     private var selectedDate: String = ""
 
@@ -54,6 +55,11 @@ class BuyTicket : AppCompatActivity() {
         movieRunTime.text = runTime
         movieRate.text = rate
         movieGenre.text = genre
+
+        backButton = findViewById(R.id.btn_back)
+        backButton.setOnClickListener{
+            this.finish()
+        }
 
         recycleDates = findViewById(R.id.recycleDates)
         recycleDates.layoutManager =
