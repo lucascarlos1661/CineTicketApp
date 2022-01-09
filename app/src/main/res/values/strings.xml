@@ -19,4 +19,7 @@
     <string name="movies">Em cartaz</string>
     <string name="coming_soon">Vem aí</string>
     <string name="my_tickets">Meus ingressos</string>
+    <string name="back_button_description">Botão para voltar a tela anterior</string>
+    <string name="txt_separator">"  |  "</string>
+    <string name="poster_description">Imagem do poster do filme</string>
 </resources>

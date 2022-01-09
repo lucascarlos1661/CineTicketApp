@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
 
     <TextView
         android:id="@+id/txt_room"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sala: "
+        android:text="@string/text_room"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -20,7 +21,7 @@
         android:id="@+id/room_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="06"
+        android:text="@string/text_number_room"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -32,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Dublado"
+        android:text="@string/text_room_audio"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
