@@ -111,12 +111,25 @@
         android:id="@+id/recycleDates"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="8dp"
+        android:layout_marginHorizontal="6dp"
         android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="@id/line"
         app:layout_constraintTop_toBottomOf="@id/line"
         tools:itemCount="7"
         tools:listitem="@layout/dates_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerRooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/recycleDates"
+        app:layout_constraintTop_toBottomOf="@id/recycleDates"
+        tools:itemCount="2"
+        tools:listitem="@layout/room_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
