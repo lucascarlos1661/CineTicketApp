@@ -65,8 +65,8 @@ class BuyTicket : AppCompatActivity() {
         val mMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent) {
                 selectedDate = intent.getStringExtra("selectedDate").toString()
-                var filteredDate = daysList.filter { it.date == selectedDate }
 
+                val filteredDate = daysList.filter { it.date == selectedDate }
 
                 recycleRooms = findViewById(R.id.recyclerRooms)
                 recycleRooms.layoutManager = LinearLayoutManager(this@BuyTicket)
@@ -82,7 +82,6 @@ class BuyTicket : AppCompatActivity() {
         }
         LocalBroadcastManager.getInstance(this)
             .registerReceiver(mMessageReceiver, IntentFilter("message_subject_intent"))
-
     }
 
     private fun getData(movieId: String) {

@@ -11,17 +11,20 @@ import androidx.core.content.ContextCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
-import java.lang.String
 
 class DaysAdapter(private val context: Context, private val datesList: List<Days>) :
     RecyclerView.Adapter<DaysViewHolder>() {
 
     private var selectedItemPosition: Int = 0
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DaysViewHolder =
-        DaysViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.dates_item, parent, false)
-        )
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DaysViewHolder {
+
+        if (selectedItemPosition == 0) updateSelectDate(datesList[0].date)
+
+        return DaysViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.dates_item, parent, false))
+    }
+
 
     override fun getItemCount(): Int = datesList.size
 
@@ -33,10 +36,7 @@ class DaysAdapter(private val context: Context, private val datesList: List<Days
         holder.datesCard.setOnClickListener {
             selectedItemPosition = position
             notifyDataSetChanged()
-
-            val intent = Intent("message_subject_intent")
-            intent.putExtra("selectedDate", item.date)
-            LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
+            updateSelectDate(item.date)
         }
 
         if (selectedItemPosition == position) {
@@ -46,6 +46,12 @@ class DaysAdapter(private val context: Context, private val datesList: List<Days
             holder.datesWeekday.setTextColor(ContextCompat.getColor(context, R.color.black))
             holder.datesDate.setTextColor(ContextCompat.getColor(context, R.color.black))
         }
+    }
+
+    private fun updateSelectDate(date: String) {
+        val intent = Intent("message_subject_intent")
+        intent.putExtra("selectedDate", date)
+        LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
     }
 }
 
