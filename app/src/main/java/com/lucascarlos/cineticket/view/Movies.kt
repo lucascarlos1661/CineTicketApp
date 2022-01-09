@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
@@ -23,7 +24,7 @@ class Movies : Fragment(R.layout.activity_movies) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recycleMovies = requireView().findViewById(R.id.recycleMovies)
-        recycleMovies.layoutManager = LinearLayoutManager(requireContext())
+        recycleMovies.layoutManager = GridLayoutManager(requireContext(), 2)
         getData()
     }
 
