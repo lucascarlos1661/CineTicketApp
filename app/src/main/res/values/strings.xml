@@ -25,4 +25,6 @@
     <string name="read_more">Leia mais</string>
     <string name="movie_synopsis">O herói amigo da vizinhança é desmascarado e não consegue mais separar sua vida normal ...</string>
     <string name="age">12</string>
+    <string name="release_date">Data de estreia:</string>
+    <string name="movie_release_date">13/01/2022</string>
 </resources>
