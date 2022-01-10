@@ -5,7 +5,7 @@
     <string name="genre">Gênero: </string>
     <string name="movie_genre">Ação</string>
     <string name="rate_description">Icone de classificação do filme</string>
-    <string name="movie_age">Classificação:</string>
+    <string name="movie_age">Classificação: </string>
     <string name="btn_buy_ticket">Comprar Ingresso</string>
     <string name="btn_story_line_movie">Sinopse</string>
     <string name="schedules">Horários: </string>
@@ -22,4 +22,7 @@
     <string name="back_button_description">Botão para voltar a tela anterior</string>
     <string name="txt_separator">"  |  "</string>
     <string name="poster_description">Imagem do poster do filme</string>
+    <string name="read_more">Leia mais</string>
+    <string name="movie_synopsis">O herói amigo da vizinhança é desmascarado e não consegue mais separar sua vida normal ...</string>
+    <string name="age">12</string>
 </resources>

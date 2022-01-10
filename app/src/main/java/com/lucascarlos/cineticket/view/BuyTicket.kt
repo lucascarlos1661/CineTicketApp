@@ -27,6 +27,7 @@ class BuyTicket : AppCompatActivity() {
     lateinit var recycleDates: RecyclerView
     lateinit var recycleRooms: RecyclerView
     lateinit var backButton: ImageView
+    lateinit var readMore: TextView
     private var daysList: List<Days> = emptyList()
     private var selectedDate: String = ""
 
@@ -36,14 +37,17 @@ class BuyTicket : AppCompatActivity() {
 
         val movieId = intent.getStringExtra("movieId")
         val bannerUrl = intent.getStringExtra("bannerUrl")
+        val storyLine = intent.getStringExtra("movieStoryLine")
         val posterUrl = intent.getStringExtra("posterUrl")
         val title = intent.getStringExtra("movieTitle")
         val rate = intent.getStringExtra("movieRate")
+        val age = intent.getStringExtra("movieAge")
         val runTime = intent.getStringExtra("runTime")
         val genre = intent.getStringExtra("movieGenre")
 
         val movieBanner: ImageView = findViewById(R.id.movie_banner)
         val movieTitle: TextView = findViewById(R.id.movie_title)
+        val movieStoryLine: TextView = findViewById(R.id.movie_story_line)
         val moviePoster: ImageView = findViewById(R.id.movie_poster)
         val movieRate: TextView = findViewById(R.id.movie_rate)
         val movieRunTime: TextView = findViewById(R.id.movie_run_time)
@@ -56,8 +60,10 @@ class BuyTicket : AppCompatActivity() {
         movieRate.text = rate
         movieGenre.text = genre
 
+        (storyLine?.take(83) + " ...").also { movieStoryLine.text = it }
+
         backButton = findViewById(R.id.btn_back)
-        backButton.setOnClickListener{
+        backButton.setOnClickListener {
             this.finish()
         }
 
@@ -66,6 +72,21 @@ class BuyTicket : AppCompatActivity() {
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         if (movieId != null) {
             getData(movieId)
+        }
+
+        readMore = findViewById(R.id.read_more)
+
+        readMore.setOnClickListener {
+            val intent = Intent(this, MovieDetails::class.java)
+            intent.putExtra("bannerUrl", bannerUrl)
+            intent.putExtra("posterUrl", posterUrl)
+            intent.putExtra("movieTitle", title)
+            intent.putExtra("movieRate", rate)
+            intent.putExtra("movieAge", age)
+            intent.putExtra("movieStoryLine", storyLine)
+            intent.putExtra("runTime", runTime)
+            intent.putExtra("movieGenre", genre)
+            this.startActivity(intent)
         }
 
         val mMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {

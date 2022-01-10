@@ -22,7 +22,7 @@
         android:layout_width="130dp"
         android:layout_height="190dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="-30dp"
+        android:layout_marginTop="-25dp"
         android:contentDescription="@string/poster_description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/movie_banner" />
@@ -39,14 +39,16 @@
 
     <TextView
         android:id="@+id/movie_title"
-        android:layout_width="215dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="50dp"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/movie_poster"
         app:layout_constraintTop_toBottomOf="@id/movie_banner"
         tools:text="@string/movie_title" />
@@ -74,7 +76,7 @@
         android:id="@+id/movie_run_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="6dp"
         android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="@+id/movie_title"
         app:layout_constraintTop_toBottomOf="@+id/movie_rate"
@@ -96,6 +98,27 @@
         app:layout_constraintLeft_toRightOf="@id/separator"
         app:layout_constraintTop_toTopOf="@id/separator"
         tools:text="@string/movie_genre" />
+
+    <TextView
+        android:id="@+id/movie_story_line"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="12dp"
+        android:text="@string/movie_synopsis"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/movie_run_time"
+        app:layout_constraintTop_toBottomOf="@id/movie_run_time" />
+
+    <TextView
+        android:id="@+id/read_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/read_more"
+        android:textColor="@color/red_500"
+        app:layout_constraintStart_toStartOf="@id/movie_story_line"
+        app:layout_constraintTop_toBottomOf="@id/movie_story_line" />
 
     <TextView
         android:id="@+id/txt_choose_date"

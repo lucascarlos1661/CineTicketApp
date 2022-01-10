@@ -31,14 +31,6 @@ class MoviesAdapter(private val context: Context, private val moviesList: List<M
         holder.movieTitle.text = item.title
         Glide.with(context).load(item.posterUrl).into(holder.movieBanner)
 
-//        holder.btnSynopsis.setOnClickListener {
-//            MaterialAlertDialogBuilder(context)
-//                .setTitle(item.title)
-//                .setMessage(item.storyLine)
-//                .setPositiveButton("Ok") { _, _ -> }
-//                .show()
-//        }
-
         holder.movieCard.setOnClickListener {
             val intent = Intent(context, BuyTicket::class.java)
             intent.putExtra("movieId", item.id)
@@ -46,6 +38,8 @@ class MoviesAdapter(private val context: Context, private val moviesList: List<M
             intent.putExtra("posterUrl", item.posterUrl)
             intent.putExtra("movieTitle", item.title)
             intent.putExtra("movieRate", item.rating)
+            intent.putExtra("movieAge", item.age)
+            intent.putExtra("movieStoryLine", item.storyLine)
             intent.putExtra("runTime", item.runTime)
             intent.putExtra("movieGenre", item.genre)
             context.startActivity(intent)
