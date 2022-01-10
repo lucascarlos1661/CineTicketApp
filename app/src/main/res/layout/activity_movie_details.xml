@@ -93,6 +93,28 @@
         app:layout_constraintTop_toTopOf="@+id/age" />
 
     <TextView
+        android:id="@+id/release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/release_date"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/movie_release_date"
+        app:layout_constraintTop_toTopOf="@+id/movie_release_date" />
+
+    <TextView
+        android:id="@+id/movie_release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/movie_release_date"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/age" />
+
+    <TextView
         android:id="@+id/movie_story_line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

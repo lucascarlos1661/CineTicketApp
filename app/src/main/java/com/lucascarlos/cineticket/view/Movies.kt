@@ -35,7 +35,7 @@ class Movies : Fragment(R.layout.activity_movies) {
         call.enqueue(object : Callback<List<Movies>> {
             override fun onResponse(call: Call<List<Movies>>, response: Response<List<Movies>>) {
                 val adapter =
-                    MoviesAdapter(requireContext(), response.body()?.toList() as List<Movies>)
+                    MoviesAdapter(requireContext(), response.body()?.toList() as List<Movies>, null)
                 recycleMovies.adapter = adapter
             }
 

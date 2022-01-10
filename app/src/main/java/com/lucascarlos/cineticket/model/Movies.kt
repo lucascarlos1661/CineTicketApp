@@ -7,6 +7,8 @@ data class Movies(
     val id: String,
     @SerializedName("title")
     val title: String,
+    @SerializedName("releaseDate")
+    val releaseDate: String?,
     @SerializedName("runTime")
     val runTime: String,
     @SerializedName("genre")
