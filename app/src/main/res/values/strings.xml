@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Cine Ticket</string>
     <string name="movie_title">Homem Aranha sem volta para casa</string>
     <string name="run_time">Duração: </string>
@@ -13,7 +13,7 @@
     <string name="movie_audio_hint">Dublado, Legendado</string>
     <string name="banner_description">Imagem do banner do filme</string>
     <string name="choose_date">Escolha uma data</string>
-    <string name="text_room">Sala:</string>
+    <string name="text_room">Sala</string>
     <string name="text_number_room">06</string>
     <string name="text_room_audio">Dublado</string>
     <string name="movies">Em cartaz</string>
@@ -23,8 +23,12 @@
     <string name="txt_separator">"  |  "</string>
     <string name="poster_description">Imagem do poster do filme</string>
     <string name="read_more">Leia mais</string>
-    <string name="movie_synopsis">O herói amigo da vizinhança é desmascarado e não consegue mais separar sua vida normal ...</string>
+    <string name="movie_synopsis" tools:ignore="TypographyEllipsis">O herói amigo da vizinhança é desmascarado e não consegue mais separar sua vida normal ...</string>
     <string name="age">12</string>
     <string name="release_date">Data de estreia:</string>
     <string name="movie_release_date">13/01/2022</string>
+    <string name="txt_weekday">Qui</string>
+    <string name="txt_date">6</string>
+    <string name="rectangle_description">Caixa em formato de retângulo</string>
+    <string name="txt_schedule">17:40</string>
 </resources>

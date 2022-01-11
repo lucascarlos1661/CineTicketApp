@@ -8,7 +8,6 @@
     android:layout_columnWeight="1"
     android:layout_marginHorizontal="6dp"
     android:layout_marginVertical="4dp"
-    android:paddingEnd="8dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp">
 
@@ -21,9 +20,10 @@
             android:id="@+id/weekday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Qui"
+            android:fontFamily="@font/lexenddeca_medium"
+            android:text="@string/txt_weekday"
             android:textColor="@color/black"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,11 +32,12 @@
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="6"
+            android:fontFamily="@font/lexenddeca_medium"
+            android:text="@string/txt_date"
             android:textColor="@color/black"
-            android:textSize="18dp"
-            app:layout_constraintEnd_toEndOf="@id/weekday"
-            app:layout_constraintStart_toStartOf="@id/weekday"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/weekday" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
