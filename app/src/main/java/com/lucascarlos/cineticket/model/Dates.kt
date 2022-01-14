@@ -12,6 +12,8 @@ data class Dates(
 data class Days(
     @SerializedName("date")
     val date: String,
+    @SerializedName("fullDate")
+    val fullDate: String,
     @SerializedName("weekday")
     val weekday: String,
     @SerializedName("rooms")
