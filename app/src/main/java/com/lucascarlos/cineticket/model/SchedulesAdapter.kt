@@ -1,14 +1,25 @@
 package com.lucascarlos.cineticket.model
 
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
+import com.lucascarlos.cineticket.view.ChooseSeat
+import com.lucascarlos.cineticket.view.MovieDetails
 
-class SchedulesAdapter(private val context: Context, private val schedulesList: List<String>) :
+class SchedulesAdapter(
+    private val context: Context,
+    private val schedulesList: List<String>,
+    private val date: String,
+    private val roomNumber: String,
+    private val movieTitle: String,
+) :
     RecyclerView.Adapter<SchedulesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SchedulesViewHolder =
@@ -21,10 +32,19 @@ class SchedulesAdapter(private val context: Context, private val schedulesList: 
     override fun onBindViewHolder(holder: SchedulesViewHolder, position: Int) {
         val item = schedulesList[position]
         holder.schedule.text = item
-    }
 
+        holder.scheduleRectangle.setOnClickListener {
+            val intent = Intent(context, ChooseSeat::class.java)
+            intent.putExtra("movieTitle", movieTitle)
+            intent.putExtra("roomNumber", roomNumber)
+            intent.putExtra("date", date)
+            intent.putExtra("time", item)
+            context.startActivity(intent)
+        }
+    }
 }
 
 class SchedulesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val schedule: TextView = itemView.findViewById(R.id.schedule)
+    val scheduleRectangle: ImageView = itemView.findViewById(R.id.rectangle)
 }

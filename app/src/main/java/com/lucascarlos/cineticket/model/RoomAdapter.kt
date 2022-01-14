@@ -9,7 +9,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
 
-class RoomAdapter(private val context: Context, private val roomsList: List<Rooms>) :
+class RoomAdapter(
+    private val context: Context,
+    private val roomsList: List<Rooms>,
+    private val date: String,
+    private val movieTitle: String
+) :
     RecyclerView.Adapter<RoomViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomViewHolder =
         RoomViewHolder(
@@ -22,7 +27,7 @@ class RoomAdapter(private val context: Context, private val roomsList: List<Room
         holder.roomNumber.text = item.number
         holder.roomAudio.text = item.audio
 
-        setSchedulesItemRecycler(holder.recyclerSchedules, item.schedules.toList())
+        setSchedulesItemRecycler(holder.recyclerSchedules, item.schedules.toList(), item.number)
     }
 
     override fun getItemCount(): Int = roomsList.size
@@ -30,8 +35,9 @@ class RoomAdapter(private val context: Context, private val roomsList: List<Room
     private fun setSchedulesItemRecycler(
         recyclerView: RecyclerView,
         schedulesList: List<String>,
+        roomNumber: String,
     ) {
-        val itemRecyclerAdapter = SchedulesAdapter(context, schedulesList)
+        val itemRecyclerAdapter = SchedulesAdapter(context, schedulesList, date, roomNumber, movieTitle)
         recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         recyclerView.adapter = itemRecyclerAdapter
     }

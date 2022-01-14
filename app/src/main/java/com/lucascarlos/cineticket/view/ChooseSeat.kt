@@ -1,10 +1,12 @@
 package com.lucascarlos.cineticket.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
 import com.lucascarlos.cineticket.api.MyRetrofit
@@ -13,16 +15,35 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+
 class ChooseSeat : AppCompatActivity() {
 
     lateinit var recyclerSeats: RecyclerView
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_seat)
+
         recyclerSeats = findViewById(R.id.recycleSeats)
-        recyclerSeats.layoutManager = GridLayoutManager(this, 3)
+
+        val title = intent.getStringExtra("movieTitle")
+        val room = intent.getStringExtra("roomNumber")
+        val date = intent.getStringExtra("date")
+        val time = intent.getStringExtra("time")
+
+        val movieTitle: TextView = findViewById(R.id.movie_title)
+        val movieRoom: TextView = findViewById(R.id.movie_room)
+        val movieDate: TextView = findViewById(R.id.movie_date)
+        val movieTime: TextView = findViewById(R.id.movie_time)
+
+        movieTitle.text = title
+        movieRoom.text = room
+        movieDate.text = date
+        movieTime.text = time
+
         getData()
+
     }
 
     private fun getData() {
@@ -33,10 +54,11 @@ class ChooseSeat : AppCompatActivity() {
             override fun onResponse(call: Call<List<Seats>>, response: Response<List<Seats>>) {
                 val apiResponse = response.body()?.toList() as List<Seats>
 
-                var seatsList: List<String> = emptyList()
-
-                for (i in apiResponse) {
-                    seatsList = seatsList + i.seat
+                recyclerSeats.layoutManager = object : LinearLayoutManager(this@ChooseSeat) {
+                    override fun checkLayoutParams(lp: RecyclerView.LayoutParams): Boolean {
+                        lp.height = height / apiResponse.size
+                        return true
+                    }
                 }
 
                 val adapter = SeatsAdapter(this@ChooseSeat, apiResponse)

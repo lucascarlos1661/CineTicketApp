@@ -19,7 +19,7 @@ class DaysAdapter(private val context: Context, private val datesList: List<Days
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DaysViewHolder {
 
-        if (selectedItemPosition == 0) updateSelectDate(datesList[0].date)
+        if (selectedItemPosition == 0) updateSelectDate(datesList[0].date, null)
 
         return DaysViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.dates_item, parent, false))
@@ -36,7 +36,7 @@ class DaysAdapter(private val context: Context, private val datesList: List<Days
         holder.datesCard.setOnClickListener {
             selectedItemPosition = position
             notifyDataSetChanged()
-            updateSelectDate(item.date)
+            updateSelectDate(item.date, item.fullDate)
         }
 
         if (selectedItemPosition == position) {
@@ -48,9 +48,10 @@ class DaysAdapter(private val context: Context, private val datesList: List<Days
         }
     }
 
-    private fun updateSelectDate(date: String) {
+    private fun updateSelectDate(date: String, fullDate: String?) {
         val intent = Intent("message_subject_intent")
         intent.putExtra("selectedDate", date)
+        intent.putExtra("fullDate", fullDate)
         LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
     }
 }

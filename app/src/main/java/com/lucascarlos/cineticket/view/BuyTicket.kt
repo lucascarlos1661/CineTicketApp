@@ -92,6 +92,7 @@ class BuyTicket : AppCompatActivity() {
         val mMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent) {
                 selectedDate = intent.getStringExtra("selectedDate").toString()
+                val fullDate: String = intent.getStringExtra("fullDate").toString()
 
                 val filteredDate = daysList.filter { it.date == selectedDate }
 
@@ -103,7 +104,7 @@ class BuyTicket : AppCompatActivity() {
                     roomsList = roomsList + i.rooms
                 }
 
-                val adapter = RoomAdapter(this@BuyTicket, roomsList)
+                val adapter = title?.let { RoomAdapter(this@BuyTicket, roomsList, fullDate, it) }
                 recycleRooms.adapter = adapter
             }
         }

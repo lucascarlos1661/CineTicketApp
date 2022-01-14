@@ -4,20 +4,246 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".view.ChooseSeat">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/movie_title" />
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexenddeca_medium"
+        android:text="@string/movie_title"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@id/close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="Sala: "
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/movie_title"
+        app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+    <TextView
+        android:id="@+id/txt_seats_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="Assentos selecionados:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/movie_title"
+        app:layout_constraintTop_toBottomOf="@+id/room" />
+
+    <TextView
+        android:id="@+id/seats_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="l6, j1, h11"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_seats_selected"
+        app:layout_constraintTop_toTopOf="@+id/txt_seats_selected" />
+
+    <TextView
+        android:id="@+id/movie_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="02"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/room"
+        app:layout_constraintTop_toTopOf="@+id/room" />
+
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/movie_room"
+        app:layout_constraintTop_toTopOf="@+id/movie_room" />
+
+    <TextView
+        android:id="@+id/movie_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="30/01/2022"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/separator"
+        app:layout_constraintTop_toTopOf="@+id/separator" />
+
+    <TextView
+        android:id="@+id/separator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="-"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/movie_date"
+        app:layout_constraintTop_toTopOf="@+id/movie_date" />
+
+    <TextView
+        android:id="@+id/movie_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="19:40"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/separator2"
+        app:layout_constraintTop_toTopOf="@+id/separator2" />
+
+    <TextView
+        android:id="@+id/txt_choose_seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/lexenddeca_medium"
+        android:text="Escolha seu assento"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_seats_selected" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleSeats"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linear_bottom_page"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:itemCount="3"
-        tools:listitem="@layout/seats_item" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_choose_seat" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear_bottom_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexenddeca_medium"
+            android:text="Legenda"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/rectangle_available"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/rectangle_description"
+            android:padding="1dp"
+            android:src="@drawable/seat_available"
+            app:layout_constraintBottom_toTopOf="@id/rectangle_selected"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/description" />
+
+        <TextView
+            android:id="@+id/txt_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/lexenddeca_light"
+            android:text="Disponível"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_available"
+            app:layout_constraintStart_toEndOf="@+id/rectangle_available" />
+
+        <ImageView
+            android:id="@+id/rectangle_no_available"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/rectangle_description"
+            android:padding="1dp"
+            android:src="@drawable/seat_no_available"
+            app:layout_constraintStart_toEndOf="@id/txt_available"
+            app:layout_constraintTop_toTopOf="@id/rectangle_available" />
+
+        <TextView
+            android:id="@+id/txt_no_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/lexenddeca_light"
+            android:text="Reservado"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_available"
+            app:layout_constraintStart_toEndOf="@+id/rectangle_no_available" />
+
+        <ImageView
+            android:id="@+id/rectangle_selected"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="6dp"
+            android:contentDescription="@string/rectangle_description"
+            android:padding="1dp"
+            android:src="@drawable/seat_selected"
+            app:layout_constraintBottom_toTopOf="@id/btn_continue"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/lexenddeca_light"
+            android:text="Selecionado"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rectangle_selected"
+            app:layout_constraintStart_toEndOf="@+id/rectangle_selected" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
