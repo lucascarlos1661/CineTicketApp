@@ -31,4 +31,15 @@
     <string name="txt_date">6</string>
     <string name="rectangle_description">Caixa em formato de retângulo</string>
     <string name="txt_schedule">17:40</string>
+    <string name="close_screen_description">Botão para fechar a tela atual</string>
+    <string name="txt_room_choose_seat">Sala:</string>
+    <string name="txt_selected_seats">Assentos selecionados:</string>
+    <string name="txt_separator_choose_seat">-</string>
+    <string name="txt_movie_full_date">30/01/2022</string>
+    <string name="txt_choose_your_seat">Escolha seu assento</string>
+    <string name="txt_subtitle">Legenda</string>
+    <string name="txt_available">Disponível</string>
+    <string name="txt_no_available">Reservado</string>
+    <string name="txt_selected">Selecionado</string>
+    <string name="txt_button_continue">Continuar</string>
 </resources>

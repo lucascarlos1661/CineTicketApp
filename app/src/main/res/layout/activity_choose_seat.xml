@@ -11,6 +11,7 @@
         android:id="@+id/close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/close_screen_description"
         android:src="@drawable/ic_close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/movie_title" />
@@ -22,7 +23,7 @@
         android:fontFamily="@font/lexenddeca_medium"
         android:text="@string/movie_title"
         android:textColor="@color/black"
-        android:textSize="16dp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@id/close"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lexenddeca_light"
-        android:text="Sala: "
+        android:text="@string/txt_room_choose_seat"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/movie_title"
@@ -45,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lexenddeca_light"
-        android:text="Assentos selecionados:"
+        android:text="@string/txt_selected_seats"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/movie_title"
@@ -53,22 +54,24 @@
 
     <TextView
         android:id="@+id/seats_selected"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/lexenddeca_light"
-        android:text="l6, j1, h11"
         android:textColor="@color/black"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txt_seats_selected"
-        app:layout_constraintTop_toTopOf="@+id/txt_seats_selected" />
+        app:layout_constraintTop_toTopOf="@+id/txt_seats_selected"
+        tools:Text="A1, A2, A3" />
 
     <TextView
         android:id="@+id/movie_room"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
         android:fontFamily="@font/lexenddeca_light"
-        android:text="02"
+        android:text="@string/text_number_room"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/room"
@@ -80,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/lexenddeca_light"
-        android:text="-"
+        android:text="@string/txt_separator_choose_seat"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/movie_room"
@@ -92,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/lexenddeca_light"
-        android:text="30/01/2022"
+        android:text="@string/txt_movie_full_date"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/separator"
@@ -104,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/lexenddeca_light"
-        android:text="-"
+        android:text="@string/txt_separator_choose_seat"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/movie_date"
@@ -116,7 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/lexenddeca_light"
-        android:text="19:40"
+        android:text="@string/txt_schedule"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/separator2"
@@ -128,9 +131,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:fontFamily="@font/lexenddeca_medium"
-        android:text="Escolha seu assento"
+        android:text="@string/txt_choose_your_seat"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txt_seats_selected" />
 
@@ -157,9 +160,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lexenddeca_medium"
-            android:text="Legenda"
+            android:text="@string/txt_subtitle"
             android:textColor="@color/black"
-            android:textSize="18dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -182,9 +185,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:fontFamily="@font/lexenddeca_light"
-            android:text="Disponível"
+            android:text="@string/txt_available"
             android:textColor="@color/black"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/rectangle_available"
             app:layout_constraintStart_toEndOf="@+id/rectangle_available" />
 
@@ -205,9 +208,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:fontFamily="@font/lexenddeca_light"
-            android:text="Reservado"
+            android:text="@string/txt_no_available"
             android:textColor="@color/black"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/rectangle_available"
             app:layout_constraintStart_toEndOf="@+id/rectangle_no_available" />
 
@@ -229,9 +232,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:fontFamily="@font/lexenddeca_light"
-            android:text="Selecionado"
+            android:text="@string/txt_selected"
             android:textColor="@color/black"
-            android:textSize="14dp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/rectangle_selected"
             app:layout_constraintStart_toEndOf="@+id/rectangle_selected" />
 
@@ -239,7 +242,7 @@
             android:id="@+id/btn_continue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Continuar"
+            android:text="@string/txt_button_continue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 

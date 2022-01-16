@@ -1,11 +1,15 @@
 package com.lucascarlos.cineticket.view
 
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
@@ -19,7 +23,7 @@ import retrofit2.Response
 class ChooseSeat : AppCompatActivity() {
 
     lateinit var recyclerSeats: RecyclerView
-
+    private var selectedSeats = mutableListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +40,7 @@ class ChooseSeat : AppCompatActivity() {
         val movieRoom: TextView = findViewById(R.id.movie_room)
         val movieDate: TextView = findViewById(R.id.movie_date)
         val movieTime: TextView = findViewById(R.id.movie_time)
+        val seatsSelected: TextView = findViewById(R.id.seats_selected)
 
         movieTitle.text = title
         movieRoom.text = room
@@ -43,6 +48,23 @@ class ChooseSeat : AppCompatActivity() {
         movieTime.text = time
 
         getData()
+
+        val mMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+            override fun onReceive(context: Context?, intent: Intent) {
+                val seat = intent.getStringExtra("selectedSeat")
+
+                if (selectedSeats.contains(seat)) {
+                    selectedSeats.remove(seat)
+                } else {
+                    seat?.let { selectedSeats.add(it) }
+                }
+
+                seatsSelected.text = selectedSeats.distinct().joinToString(separator = ", ")
+            }
+        }
+
+        LocalBroadcastManager.getInstance(this)
+            .registerReceiver(mMessageReceiver, IntentFilter("message_subject_intent"))
 
     }
 

@@ -27,14 +27,15 @@ class SeatsAdapter(
     override fun onBindViewHolder(holder: SeatsViewHolder, position: Int) {
         val item = seatsList[position]
 
-        setSeatsItemRecycler(holder.recyclerSeat, item.seat.toList())
+        setSeatsItemRecycler(holder.recyclerSeat, item.seat.toList(), item.y)
     }
 
     private fun setSeatsItemRecycler(
         recyclerView: RecyclerView,
         seatsList: List<String>,
+        y: String
     ) {
-        val itemRecyclerAdapter = SeatAdapter(context, seatsList)
+        val itemRecyclerAdapter = SeatAdapter(context, seatsList, y)
 
         recyclerView.layoutManager = object : LinearLayoutManager(context, RecyclerView.HORIZONTAL, false) {
             override fun checkLayoutParams(lp: RecyclerView.LayoutParams): Boolean {
