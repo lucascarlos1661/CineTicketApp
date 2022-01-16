@@ -2,7 +2,6 @@ package com.lucascarlos.cineticket.model
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,14 +33,14 @@ class SeatAdapter(
         val item = seatList[position]
 
         if (item == "true") {
-            holder.rectangleAvaliable.visibility = View.VISIBLE
+            holder.rectangleAvailable.visibility = View.VISIBLE
         } else if (item == "false") {
-            holder.rectangleNoAvaliable.visibility = View.VISIBLE
+            holder.rectangleNoAvailable.visibility = View.VISIBLE
         }
 
-        holder.rectangleAvaliable.setOnClickListener {
+        holder.rectangleAvailable.setOnClickListener {
             holder.rectangleSelected.visibility = View.VISIBLE
-            holder.rectangleAvaliable.visibility = View.GONE
+            holder.rectangleAvailable.visibility = View.GONE
 
             selectedSeat = "${y}${position + 1}"
 
@@ -50,7 +49,7 @@ class SeatAdapter(
 
         holder.rectangleSelected.setOnClickListener{
             holder.rectangleSelected.visibility = View.GONE
-            holder.rectangleAvaliable.visibility = View.VISIBLE
+            holder.rectangleAvailable.visibility = View.VISIBLE
 
             selectedSeat = "${y}${position + 1}"
             updateSelectedSeat()
@@ -66,8 +65,7 @@ class SeatAdapter(
 }
 
 class SeatViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val rectangle: ImageView = itemView.findViewById(R.id.rectangle)
-    val rectangleAvaliable: ImageView = itemView.findViewById(R.id.rectangleAvailable)
-    val rectangleNoAvaliable: ImageView = itemView.findViewById(R.id.rectangleNoAvailable)
+    val rectangleAvailable: ImageView = itemView.findViewById(R.id.rectangleAvailable)
+    val rectangleNoAvailable: ImageView = itemView.findViewById(R.id.rectangleNoAvailable)
     val rectangleSelected: ImageView = itemView.findViewById(R.id.rectangleSelected)
 }
