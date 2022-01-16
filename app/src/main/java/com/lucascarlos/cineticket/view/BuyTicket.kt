@@ -6,7 +6,9 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +32,7 @@ class BuyTicket : AppCompatActivity() {
     lateinit var readMore: TextView
     private var daysList: List<Days> = emptyList()
     private var selectedDate: String = ""
+    lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,6 +55,7 @@ class BuyTicket : AppCompatActivity() {
         val movieRate: TextView = findViewById(R.id.movie_rate)
         val movieRunTime: TextView = findViewById(R.id.movie_run_time)
         val movieGenre: TextView = findViewById(R.id.movie_genre)
+        progressBar = findViewById(R.id.progress_bar)
 
         Glide.with(this).load(bannerUrl).into(movieBanner)
         Glide.with(this).load(posterUrl).into(moviePoster)
@@ -126,11 +130,13 @@ class BuyTicket : AppCompatActivity() {
 
                 val adapter = DaysAdapter(this@BuyTicket, daysList)
                 recycleDates.adapter = adapter
+                progressBar.visibility = View.GONE
             }
 
             override fun onFailure(call: Call<List<Dates>>, t: Throwable) {
                 Toast.makeText(this@BuyTicket, t.message, Toast.LENGTH_LONG).show()
                 t.message?.let { Log.e("Err", it) }
+                progressBar.visibility = View.GONE
             }
 
         })

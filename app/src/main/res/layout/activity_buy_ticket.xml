@@ -161,6 +161,15 @@
         tools:itemCount="7"
         tools:listitem="@layout/dates_item" />
 
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerRooms"
+        app:layout_constraintEnd_toEndOf="@id/recyclerRooms"
+        app:layout_constraintStart_toStartOf="@id/recyclerRooms"
+        app:layout_constraintTop_toTopOf="@id/recyclerRooms" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerRooms"
         android:layout_width="match_parent"

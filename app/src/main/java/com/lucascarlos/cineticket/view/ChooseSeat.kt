@@ -6,7 +6,9 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +27,7 @@ class ChooseSeat : AppCompatActivity() {
 
     lateinit var recyclerSeats: RecyclerView
     private var selectedSeats = mutableListOf<String>()
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +45,7 @@ class ChooseSeat : AppCompatActivity() {
         val movieDate: TextView = findViewById(R.id.movie_date)
         val movieTime: TextView = findViewById(R.id.movie_time)
         val seatsSelected: TextView = findViewById(R.id.seats_selected)
+        progressBar = findViewById(R.id.progress_bar)
 
         val closeButton: ImageView = findViewById(R.id.close)
 
@@ -52,7 +56,7 @@ class ChooseSeat : AppCompatActivity() {
 
         getData()
 
-        closeButton.setOnClickListener{
+        closeButton.setOnClickListener {
             this.finish()
         }
 
@@ -92,13 +96,14 @@ class ChooseSeat : AppCompatActivity() {
 
                 val adapter = SeatsAdapter(this@ChooseSeat, apiResponse)
                 recyclerSeats.adapter = adapter
+                progressBar.visibility = View.GONE
             }
 
             override fun onFailure(call: Call<List<Seats>>, t: Throwable) {
                 Toast.makeText(this@ChooseSeat, t.message, Toast.LENGTH_LONG).show()
                 t.message?.let { Log.e("Err", it) }
+                progressBar.visibility = View.GONE
             }
-
         })
     }
 }
