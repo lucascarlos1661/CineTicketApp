@@ -28,15 +28,19 @@ class ChooseSeat : AppCompatActivity() {
     lateinit var recyclerSeats: RecyclerView
     private var selectedSeats = mutableListOf<String>()
     private lateinit var progressBar: ProgressBar
+    private var room: String? = null
+    private var seatsList: List<Seat> = emptyList()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override
+
+    fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_seat)
 
         recyclerSeats = findViewById(R.id.recycleSeats)
 
         val title = intent.getStringExtra("movieTitle")
-        val room = intent.getStringExtra("roomNumber")
+        room = intent.getStringExtra("roomNumber")
         val date = intent.getStringExtra("date")
         val time = intent.getStringExtra("time")
 
@@ -81,20 +85,24 @@ class ChooseSeat : AppCompatActivity() {
 
     private fun getData() {
         val call: Call<List<Seats>> =
-            MyRetrofit.instance?.seatsApi()?.getSeatsApi() as Call<List<Seats>>
+            room?.let { MyRetrofit.instance?.seatsApi()?.getSeatsApi(it) } as Call<List<Seats>>
         call.enqueue(object : Callback<List<Seats>> {
 
             override fun onResponse(call: Call<List<Seats>>, response: Response<List<Seats>>) {
                 val apiResponse = response.body()?.toList() as List<Seats>
 
+                for (i in apiResponse) {
+                    seatsList = seatsList + i.seats
+                }
+
                 recyclerSeats.layoutManager = object : LinearLayoutManager(this@ChooseSeat) {
                     override fun checkLayoutParams(lp: RecyclerView.LayoutParams): Boolean {
-                        lp.height = height / apiResponse.size
+                        lp.height = height / seatsList.size
                         return true
                     }
                 }
 
-                val adapter = SeatsAdapter(this@ChooseSeat, apiResponse)
+                val adapter = SeatsAdapter(this@ChooseSeat, seatsList)
                 recyclerSeats.adapter = adapter
                 progressBar.visibility = View.GONE
             }

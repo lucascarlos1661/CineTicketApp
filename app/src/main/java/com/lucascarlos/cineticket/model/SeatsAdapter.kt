@@ -1,18 +1,16 @@
 package com.lucascarlos.cineticket.model
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
 
 class SeatsAdapter(
-    private val context: Context, private val seatsList: List<Seats>,
+    private val context: Context, private val seatsList: List<Seat>,
 ) :
     RecyclerView.Adapter<SeatsViewHolder>() {
 
