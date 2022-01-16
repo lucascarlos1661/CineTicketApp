@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -42,12 +43,18 @@ class ChooseSeat : AppCompatActivity() {
         val movieTime: TextView = findViewById(R.id.movie_time)
         val seatsSelected: TextView = findViewById(R.id.seats_selected)
 
+        val closeButton: ImageView = findViewById(R.id.close)
+
         movieTitle.text = title
         movieRoom.text = room
         movieDate.text = date
         movieTime.text = time
 
         getData()
+
+        closeButton.setOnClickListener{
+            this.finish()
+        }
 
         val mMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent) {
