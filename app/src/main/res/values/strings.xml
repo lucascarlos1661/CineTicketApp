@@ -36,10 +36,11 @@
     <string name="txt_selected_seats">Assentos selecionados:</string>
     <string name="txt_separator_choose_seat">-</string>
     <string name="txt_movie_full_date">30/01/2022</string>
-    <string name="txt_choose_your_seat">Escolha seu assento</string>
+    <string name="txt_choose_your_seat">Escolha seu assento:</string>
     <string name="txt_subtitle">Legenda</string>
     <string name="txt_available">Disponível</string>
     <string name="txt_no_available">Reservado</string>
     <string name="txt_selected">Selecionado</string>
     <string name="txt_button_continue">Continuar</string>
+    <string name="txt_screen">TELA</string>
 </resources>

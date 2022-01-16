@@ -9,4 +9,7 @@
     <color name="red_700">#F91E1E</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="green_500">#21DB2D</color>
+    <color name="gray_500">#878585</color>
+    <color name="gray_300">#E1DDDD</color>
 </resources>
