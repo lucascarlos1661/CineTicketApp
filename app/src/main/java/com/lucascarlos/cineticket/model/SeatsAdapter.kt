@@ -28,6 +28,7 @@ class SeatsAdapter(
         val item = seatsList[position]
 
         setSeatsItemRecycler(holder.recyclerSeat, item.seat.toList(), item.y)
+        holder.row.text = item.y
     }
 
     private fun setSeatsItemRecycler(
@@ -49,4 +50,5 @@ class SeatsAdapter(
 
 class SeatsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val recyclerSeat: RecyclerView = itemView.findViewById(R.id.recyclerSeat)
+    val row: TextView = itemView.findViewById(R.id.txt_row)
 }
