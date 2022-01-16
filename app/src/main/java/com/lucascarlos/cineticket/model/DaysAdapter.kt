@@ -19,10 +19,11 @@ class DaysAdapter(private val context: Context, private val datesList: List<Days
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DaysViewHolder {
 
-        if (selectedItemPosition == 0) updateSelectDate(datesList[0].date, null)
+        if (selectedItemPosition == 0) updateSelectDate(datesList[0].date, datesList[0].fullDate)
 
         return DaysViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.dates_item, parent, false))
+            LayoutInflater.from(parent.context).inflate(R.layout.dates_item, parent, false)
+        )
     }
 
 
