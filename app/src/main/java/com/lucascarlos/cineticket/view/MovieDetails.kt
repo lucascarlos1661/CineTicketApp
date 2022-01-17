@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.bumptech.glide.Glide
 import com.lucascarlos.cineticket.R
 
@@ -13,6 +15,8 @@ class MovieDetails : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_details)
+        ContextCompat.getColor(this, R.color.black).also { window.statusBarColor = it }
+        WindowInsetsControllerCompat(window, View(this)).isAppearanceLightStatusBars = false
 
         val bannerUrl = intent.getStringExtra("bannerUrl")
         val storyLine = intent.getStringExtra("movieStoryLine")

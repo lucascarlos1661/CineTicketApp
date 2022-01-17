@@ -12,6 +12,8 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -37,6 +39,8 @@ class BuyTicket : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_ticket)
+        ContextCompat.getColor(this, R.color.black).also { window.statusBarColor = it }
+        WindowInsetsControllerCompat(window, View(this)).isAppearanceLightStatusBars = false
 
         val movieId = intent.getStringExtra("movieId")
         val bannerUrl = intent.getStringExtra("bannerUrl")
