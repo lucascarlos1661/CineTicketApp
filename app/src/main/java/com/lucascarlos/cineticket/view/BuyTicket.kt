@@ -39,8 +39,6 @@ class BuyTicket : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_ticket)
-        ContextCompat.getColor(this, R.color.black).also { window.statusBarColor = it }
-        WindowInsetsControllerCompat(window, View(this)).isAppearanceLightStatusBars = false
 
         val movieId = intent.getStringExtra("movieId")
         val bannerUrl = intent.getStringExtra("bannerUrl")
