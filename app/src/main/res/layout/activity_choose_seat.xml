@@ -71,8 +71,19 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txt_seats_selected"
-        app:layout_constraintTop_toTopOf="@+id/txt_seats_selected"
-        tools:Text="A1, A2, A3" />
+        app:layout_constraintTop_toTopOf="@+id/txt_seats_selected" />
+
+    <TextView
+        android:id="@+id/see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="@font/lexenddeca_medium"
+        android:text="@string/txt_see_all"
+        android:textColor="@color/red_700"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/seats_selected"
+        app:layout_constraintEnd_toEndOf="@id/seats_selected" />
 
     <TextView
         android:id="@+id/movie_room"
@@ -138,7 +149,7 @@
         android:id="@+id/txt_choose_seat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/lexenddeca_medium"
         android:text="@string/txt_choose_your_seat"
         android:textColor="@color/black"
@@ -161,6 +172,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="2dp"
         android:background="@color/gray_500"
+        android:fontFamily="@font/lexenddeca_medium"
         android:gravity="center"
         android:text="@string/txt_screen"
         android:textColor="@color/white"

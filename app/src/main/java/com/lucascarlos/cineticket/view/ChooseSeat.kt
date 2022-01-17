@@ -1,9 +1,7 @@
 package com.lucascarlos.cineticket.view
 
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
+import android.app.AlertDialog
+import android.content.*
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -30,6 +28,7 @@ class ChooseSeat : AppCompatActivity() {
     private lateinit var progressBar: ProgressBar
     private var room: String? = null
     private var seatsList: List<Seat> = emptyList()
+    lateinit var seeAll: TextView
 
     override
 
@@ -49,6 +48,7 @@ class ChooseSeat : AppCompatActivity() {
         val movieDate: TextView = findViewById(R.id.movie_date)
         val movieTime: TextView = findViewById(R.id.movie_time)
         val seatsSelected: TextView = findViewById(R.id.seats_selected)
+        seeAll = findViewById(R.id.see_all)
         progressBar = findViewById(R.id.progress_bar)
 
         val closeButton: ImageView = findViewById(R.id.close)
@@ -64,6 +64,10 @@ class ChooseSeat : AppCompatActivity() {
             this.finish()
         }
 
+        seeAll.setOnClickListener {
+            showSeeAllDialog()
+        }
+
         val mMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent) {
                 val seat = intent.getStringExtra("selectedSeat")
@@ -74,13 +78,31 @@ class ChooseSeat : AppCompatActivity() {
                     seat?.let { selectedSeats.add(it) }
                 }
 
-                seatsSelected.text = selectedSeats.distinct().joinToString(separator = ", ")
+                if (selectedSeats.size == 10) {
+                    seeAll.visibility = View.VISIBLE
+                    (selectedSeats.distinct()
+                        .joinToString(separator = ",") + "...").also { seatsSelected.text = it }
+                } else if (selectedSeats.size < 10) {
+                    seeAll.visibility = View.GONE
+                    seatsSelected.text = selectedSeats.distinct().joinToString(separator = ",")
+                }
             }
         }
 
         LocalBroadcastManager.getInstance(this)
             .registerReceiver(mMessageReceiver, IntentFilter("message_subject_intent"))
+    }
 
+    private fun showSeeAllDialog() {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setTitle(R.string.txt_selected_seats)
+        builder.setMessage(selectedSeats.distinct().joinToString(separator = ", "))
+        builder.setPositiveButton(
+            "Ok"
+        ) { _, _ ->
+        }
+        val alert = builder.create()
+        alert.show()
     }
 
     private fun getData() {
