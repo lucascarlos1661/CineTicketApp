@@ -50,42 +50,6 @@
         app:layout_constraintTop_toBottomOf="@+id/movie_title" />
 
     <TextView
-        android:id="@+id/txt_seats_selected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/lexenddeca_light"
-        android:text="@string/txt_selected_seats"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@id/movie_title"
-        app:layout_constraintTop_toBottomOf="@+id/room" />
-
-    <TextView
-        android:id="@+id/seats_selected"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/lexenddeca_light"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_seats_selected"
-        app:layout_constraintTop_toTopOf="@+id/txt_seats_selected" />
-
-    <TextView
-        android:id="@+id/see_all"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:fontFamily="@font/lexenddeca_medium"
-        android:text="@string/txt_see_all"
-        android:textColor="@color/red_700"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/seats_selected"
-        app:layout_constraintEnd_toEndOf="@id/seats_selected" />
-
-    <TextView
         android:id="@+id/movie_room"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -144,6 +108,42 @@
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/separator2"
         app:layout_constraintTop_toTopOf="@+id/separator2" />
+
+    <TextView
+        android:id="@+id/txt_seats_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="@string/txt_selected_seats"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/movie_title"
+        app:layout_constraintTop_toBottomOf="@+id/room" />
+
+    <TextView
+        android:id="@+id/seats_selected"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_seats_selected"
+        app:layout_constraintTop_toTopOf="@+id/txt_seats_selected" />
+
+    <TextView
+        android:id="@+id/see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="@font/lexenddeca_medium"
+        android:text="@string/txt_see_all"
+        android:textColor="@color/red_700"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/seats_selected"
+        app:layout_constraintEnd_toEndOf="@id/seats_selected" />
 
     <TextView
         android:id="@+id/txt_choose_seat"

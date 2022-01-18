@@ -45,4 +45,5 @@
     <string name="txt_screen">TELA</string>
     <string name="txt_row">A</string>
     <string name="txt_see_all">Veja todas</string>
+    <string name="txt_seat">Assentos:</string>
 </resources>
