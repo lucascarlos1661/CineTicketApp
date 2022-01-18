@@ -37,17 +37,13 @@ class MainActivity : AppCompatActivity() {
     class TabViewPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
 
         val tabs = arrayOf(R.string.movies, R.string.coming_soon, R.string.my_tickets)
-        val fragments = arrayOf(Movies(), MoviesComingSoon(), CineTicketFragment())
+        val fragments = arrayOf(Movies(), MoviesComingSoon(), MyTickets())
 
         override fun getItemCount(): Int = fragments.size
 
         override fun createFragment(position: Int): Fragment {
             return fragments[position]
         }
-
-    }
-
-    class CineTicketFragment : Fragment() {
 
     }
 }
