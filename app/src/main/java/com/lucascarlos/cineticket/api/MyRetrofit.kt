@@ -25,6 +25,14 @@ class MyRetrofit {
         return retrofit.create(SeatsApi::class.java)
     }
 
+    fun postTicketApi(): PostTicketApi {
+        return retrofit.create(PostTicketApi::class.java)
+    }
+
+    fun getTicketApi(): GetTicketApi {
+        return retrofit.create(GetTicketApi::class.java)
+    }
+
     companion object {
         private const val BASE_URL = "http://192.168.1.16:3000/"
 

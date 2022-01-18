@@ -5,10 +5,7 @@ import android.content.*
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -48,6 +45,8 @@ class ChooseSeat : AppCompatActivity() {
         val movieDate: TextView = findViewById(R.id.movie_date)
         val movieTime: TextView = findViewById(R.id.movie_time)
         val seatsSelected: TextView = findViewById(R.id.seats_selected)
+        val btnContinue: Button = findViewById(R.id.btn_continue)
+
         seeAll = findViewById(R.id.see_all)
         progressBar = findViewById(R.id.progress_bar)
 
@@ -66,6 +65,17 @@ class ChooseSeat : AppCompatActivity() {
 
         seeAll.setOnClickListener {
             showSeeAllDialog()
+        }
+
+        btnContinue.setOnClickListener {
+            val ticketData = Ticket(
+                movieTitle = title,
+                movieRoom = room,
+                movieDate = date,
+                movieTime = time,
+                seats = selectedSeats
+            )
+            addTicket(ticketData)
         }
 
         val mMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {
@@ -93,6 +103,23 @@ class ChooseSeat : AppCompatActivity() {
             .registerReceiver(mMessageReceiver, IntentFilter("message_subject_intent"))
     }
 
+    private fun addTicket(ticketData: Ticket) {
+
+        val retrofit = MyRetrofit.instance
+        retrofit?.postTicketApi()?.addTicket(ticketData)?.enqueue(
+            object : Callback<Ticket> {
+                override fun onResponse(call: Call<Ticket>, response: Response<Ticket>) {
+                    val response = response
+                }
+
+                override fun onFailure(call: Call<Ticket>, t: Throwable) {
+                    Toast.makeText(this@ChooseSeat, t.message, Toast.LENGTH_LONG).show()
+                    t.message?.let { Log.e("Err", it) }
+                }
+            }
+        )
+    }
+
     private fun showSeeAllDialog() {
         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle(R.string.txt_selected_seats)
@@ -107,10 +134,15 @@ class ChooseSeat : AppCompatActivity() {
 
     private fun getData() {
         val call: Call<List<Seats>> =
-            room?.let { MyRetrofit.instance?.seatsApi()?.getSeatsApi(it) } as Call<List<Seats>>
+            room?.let {
+                MyRetrofit.instance?.seatsApi()?.getSeatsApi(it)
+            } as Call<List<Seats>>
         call.enqueue(object : Callback<List<Seats>> {
 
-            override fun onResponse(call: Call<List<Seats>>, response: Response<List<Seats>>) {
+            override fun onResponse(
+                call: Call<List<Seats>>,
+                response: Response<List<Seats>>
+            ) {
                 val apiResponse = response.body()?.toList() as List<Seats>
 
                 for (i in apiResponse) {
