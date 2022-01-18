@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface GetTicketApi {
-    @GET("tickets")
+    @GET("tickets?_sort=id&_order=desc")
     fun getTicketsApi(): Call<List<Ticket>>
 }
