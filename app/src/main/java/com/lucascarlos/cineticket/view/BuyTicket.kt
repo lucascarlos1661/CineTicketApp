@@ -110,7 +110,7 @@ class BuyTicket : AppCompatActivity() {
                     roomsList = roomsList + i.rooms
                 }
 
-                val adapter = title?.let { RoomAdapter(this@BuyTicket, roomsList, fullDate, it) }
+                val adapter = title?.let { RoomAdapter(this@BuyTicket, roomsList, fullDate, it, posterUrl) }
                 recycleRooms.adapter = adapter
             }
         }

@@ -13,7 +13,8 @@ class RoomAdapter(
     private val context: Context,
     private val roomsList: List<Rooms>,
     private val date: String,
-    private val movieTitle: String
+    private val movieTitle: String,
+    private val posterUrl: String?
 ) :
     RecyclerView.Adapter<RoomViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RoomViewHolder =
@@ -37,7 +38,12 @@ class RoomAdapter(
         schedulesList: List<String>,
         roomNumber: String,
     ) {
-        val itemRecyclerAdapter = SchedulesAdapter(context, schedulesList, date, roomNumber, movieTitle)
+        val itemRecyclerAdapter = posterUrl?.let {
+            SchedulesAdapter(
+                context, schedulesList, date, roomNumber, movieTitle,
+                it
+            )
+        }
         recyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         recyclerView.adapter = itemRecyclerAdapter
     }

@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName
 data class Ticket(
     @SerializedName("movieTitle")
     val movieTitle: String?,
+    @SerializedName("posterUrl")
+    val posterUrl: String?,
     @SerializedName("movieRoom")
     val movieRoom: String?,
     @SerializedName("movieDate")

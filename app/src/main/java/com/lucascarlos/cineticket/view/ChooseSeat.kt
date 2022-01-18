@@ -36,6 +36,7 @@ class ChooseSeat : AppCompatActivity() {
         recyclerSeats = findViewById(R.id.recycleSeats)
 
         val title = intent.getStringExtra("movieTitle")
+        val posterUrl = intent.getStringExtra("posterUrl")
         room = intent.getStringExtra("roomNumber")
         val date = intent.getStringExtra("date")
         val time = intent.getStringExtra("time")
@@ -70,6 +71,7 @@ class ChooseSeat : AppCompatActivity() {
         btnContinue.setOnClickListener {
             val ticketData = Ticket(
                 movieTitle = title,
+                posterUrl = posterUrl,
                 movieRoom = room,
                 movieDate = date,
                 movieTime = time,

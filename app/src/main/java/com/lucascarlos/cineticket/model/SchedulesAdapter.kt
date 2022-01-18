@@ -19,6 +19,7 @@ class SchedulesAdapter(
     private val date: String,
     private val roomNumber: String,
     private val movieTitle: String,
+    private val posterUrl: String
 ) :
     RecyclerView.Adapter<SchedulesViewHolder>() {
 
@@ -36,6 +37,7 @@ class SchedulesAdapter(
         holder.scheduleRectangle.setOnClickListener {
             val intent = Intent(context, ChooseSeat::class.java)
             intent.putExtra("movieTitle", movieTitle)
+            intent.putExtra("posterUrl", posterUrl)
             intent.putExtra("roomNumber", roomNumber)
             intent.putExtra("date", date)
             intent.putExtra("time", item)
