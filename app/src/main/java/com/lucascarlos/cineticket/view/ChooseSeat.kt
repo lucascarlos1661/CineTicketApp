@@ -22,8 +22,8 @@ class ChooseSeat : AppCompatActivity() {
 
     lateinit var recyclerSeats: RecyclerView
     private var selectedSeats = mutableListOf<String>()
-    private lateinit var progressBar: ProgressBar
     private var room: String? = null
+    private lateinit var progressBar: ProgressBar
     private var seatsList: List<Seat> = emptyList()
     lateinit var seeAll: TextView
 
@@ -69,15 +69,29 @@ class ChooseSeat : AppCompatActivity() {
         }
 
         btnContinue.setOnClickListener {
-            val ticketData = Ticket(
-                movieTitle = title,
-                posterUrl = posterUrl,
-                movieRoom = room,
-                movieDate = date,
-                movieTime = time,
-                seats = selectedSeats
-            )
-            addTicket(ticketData)
+            if (selectedSeats.size != 0) {
+
+                val intent = Intent(this, ChooseTicketType::class.java)
+                intent.putExtra("movieTitle", title)
+                intent.putExtra("posterUrl", posterUrl)
+                intent.putExtra("roomNumber", room)
+                intent.putExtra("date", date)
+                intent.putExtra("time", time)
+                intent.putExtra("seats", selectedSeats.joinToString(separator = ", "))
+                this.startActivity(intent)
+
+//                val ticketData = Ticket(
+//                    movieTitle = title,
+//                    posterUrl = posterUrl,
+//                    movieRoom = room,
+//                    movieDate = date,
+//                    movieTime = time,
+//                    seats = selectedSeats
+//                )
+//                addTicket(ticketData)
+            } else {
+                Toast.makeText(this, "Selecione um assento", Toast.LENGTH_LONG).show()
+            }
         }
 
         val mMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {

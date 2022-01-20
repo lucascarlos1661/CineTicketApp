@@ -25,7 +25,7 @@
     <string name="read_more">Leia mais</string>
     <string name="movie_synopsis" tools:ignore="TypographyEllipsis">O herói amigo da vizinhança é desmascarado e não consegue mais separar sua vida normal ...</string>
     <string name="age">12</string>
-    <string name="release_date">Data de estreia:</string>
+    <string name="release_date">Estreia:</string>
     <string name="movie_release_date">13/01/2022</string>
     <string name="txt_weekday">Qui</string>
     <string name="txt_date">6</string>
@@ -44,6 +44,7 @@
     <string name="txt_button_continue">Continuar</string>
     <string name="txt_screen">TELA</string>
     <string name="txt_row">A</string>
-    <string name="txt_see_all">Veja todas</string>
+    <string name="txt_see_all">Ver todos</string>
     <string name="txt_seat">Assentos:</string>
+    <string name="txt_select_ticket_type">Selecione o tipo de assento:</string>
 </resources>
