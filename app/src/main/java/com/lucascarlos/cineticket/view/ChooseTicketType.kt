@@ -79,8 +79,6 @@ class ChooseTicketType : AppCompatActivity() {
 
         btnMinusEntire.setOnClickListener {
             updateCounter("-", "entire")
-//            quantity = Integer.parseInt(quantityCounter.text as String)
-//            quantityCounter.text = (quantity - 1).toString()
         }
 
         btnPlusEntire.setOnClickListener {
@@ -104,12 +102,16 @@ class ChooseTicketType : AppCompatActivity() {
         ) {
             when (type) {
                 "entire" -> {
-                    quantityCounterEntire.text =
-                        (Integer.parseInt(quantityCounterEntire.text.toString()) - 1).toString()
+                    if (Integer.parseInt(quantityCounterEntire.text.toString()) > 0) {
+                        quantityCounterEntire.text =
+                            (Integer.parseInt(quantityCounterEntire.text.toString()) - 1).toString()
+                    }
                 }
                 "half" -> {
-                    quantityCounterHalf.text =
-                        (Integer.parseInt(quantityCounterHalf.text.toString()) - 1).toString()
+                    if (Integer.parseInt(quantityCounterHalf.text.toString()) > 0) {
+                        quantityCounterHalf.text =
+                            (Integer.parseInt(quantityCounterHalf.text.toString()) - 1).toString()
+                    }
                 }
             }
         }
