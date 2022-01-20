@@ -1,13 +1,22 @@
 package com.lucascarlos.cineticket.view
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.google.android.material.button.MaterialButton
 import com.lucascarlos.cineticket.R
+import com.lucascarlos.cineticket.api.MyRetrofit
+import com.lucascarlos.cineticket.model.Ticket
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ChooseTicketType : AppCompatActivity() {
 
@@ -17,7 +26,9 @@ class ChooseTicketType : AppCompatActivity() {
 
     private lateinit var quantityCounterEntire: TextView
     private lateinit var quantityCounterHalf: TextView
+    private lateinit var selectedSeatCounter: TextView
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose_ticket_type)
@@ -31,10 +42,14 @@ class ChooseTicketType : AppCompatActivity() {
 
         val movieTitle: TextView = findViewById(R.id.movie_title)
         val moviePoster: ImageView = findViewById(R.id.movie_poster)
+        val btnBack: ImageView = findViewById(R.id.btn_back)
         val movieRoom: TextView = findViewById(R.id.movie_room)
         val movieDate: TextView = findViewById(R.id.movie_date)
         val movieTime: TextView = findViewById(R.id.movie_time)
         val movieSeats: TextView = findViewById(R.id.movie_seats)
+        selectedSeatCounter = findViewById(R.id.selected_seat_counter)
+        val seeAll: TextView = findViewById(R.id.see_all)
+        val btnConfirm: MaterialButton = findViewById(R.id.btn_confirm)
 
         val btnMinusEntire: TextView = findViewById(R.id.btn_minus_entire)
         val btnPlusEntire: TextView = findViewById(R.id.btn_plus_entire)
@@ -44,17 +59,15 @@ class ChooseTicketType : AppCompatActivity() {
         quantityCounterEntire = findViewById(R.id.quantity_counter_entire)
         quantityCounterHalf = findViewById(R.id.quantity_counter_half)
 
-
         seatsList = seats?.split(",")?.map { it.trim() }
         totalSeats = Integer.parseInt(seatsList?.size.toString())
-
-        val seeAll: TextView = findViewById(R.id.see_all)
 
         movieTitle.text = title
         Glide.with(this).load(posterUrl).into(moviePoster)
         movieDate.text = date
         movieRoom.text = room
         movieTime.text = time
+        selectedSeatCounter.text = "0/${seatsList?.size}"
 
         if (seatsList?.size!! >= 15) {
             seeAll.visibility = View.VISIBLE
@@ -77,6 +90,10 @@ class ChooseTicketType : AppCompatActivity() {
             alert.show()
         }
 
+        btnBack.setOnClickListener {
+            this.finish()
+        }
+
         btnMinusEntire.setOnClickListener {
             updateCounter("-", "entire")
         }
@@ -93,8 +110,47 @@ class ChooseTicketType : AppCompatActivity() {
             updateCounter("+", "half")
         }
 
+        btnConfirm.setOnClickListener {
+            if (Integer.parseInt(quantityCounterEntire.text.toString()) + Integer.parseInt(
+                    quantityCounterHalf.text.toString()
+                ) == seatsList!!.size
+            ) {
+                val ticketData = Ticket(
+                    movieTitle = title,
+                    posterUrl = posterUrl,
+                    movieRoom = room,
+                    movieDate = date,
+                    movieTime = time,
+                    seats = seatsList!!
+                )
+                saveTicket(ticketData)
+            } else {
+                Toast.makeText(
+                    this,
+                    getString(R.string.txt_toast_select_seat_type),
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
     }
 
+    private fun saveTicket(ticketData: Ticket) {
+        val retrofit = MyRetrofit.instance
+        retrofit?.postTicketApi()?.addTicket(ticketData)?.enqueue(
+            object : Callback<Ticket> {
+                override fun onResponse(call: Call<Ticket>, response: Response<Ticket>) {
+                    val response = response
+                }
+
+                override fun onFailure(call: Call<Ticket>, t: Throwable) {
+                    Toast.makeText(this@ChooseTicketType, t.message, Toast.LENGTH_LONG).show()
+                    t.message?.let { Log.e("Err", it) }
+                }
+            }
+        )
+    }
+
+    @SuppressLint("SetTextI18n")
     private fun updateCounter(operation: String, type: String) {
         if ((operation == "-") and (Integer.parseInt(quantityCounterEntire.text.toString()) + Integer.parseInt(
                 quantityCounterHalf.text.toString()
@@ -131,5 +187,10 @@ class ChooseTicketType : AppCompatActivity() {
                 }
             }
         }
+        selectedSeatCounter.text = "${
+            (Integer.parseInt(quantityCounterEntire.text.toString())) + (Integer.parseInt(
+                quantityCounterHalf.text.toString()
+            ))
+        }/${seatsList?.size}"
     }
 }

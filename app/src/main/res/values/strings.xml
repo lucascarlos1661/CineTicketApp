@@ -47,4 +47,15 @@
     <string name="txt_see_all">Ver todos</string>
     <string name="txt_seat">Assentos:</string>
     <string name="txt_select_ticket_type">Selecione o tipo de assento:</string>
+    <string name="txt_selected_seat_counter">1/1</string>
+    <string name="txt_entire">Inteira</string>
+    <string name="txt_entire_value">R$ 24,00</string>
+    <string name="description_counter_rectangle">Retângulo usuado para delimitar o contador</string>
+    <string name="txt_minus">-</string>
+    <string name="txt_counter_value">0</string>
+    <string name="txt_plus">+</string>
+    <string name="txt_half">Meia</string>
+    <string name="txt_half_value">R$ 12,00</string>
+    <string name="txt_confirm">Confirmar</string>
+    <string name="txt_toast_select_seat_type">Selecione o tipo de assento</string>
 </resources>

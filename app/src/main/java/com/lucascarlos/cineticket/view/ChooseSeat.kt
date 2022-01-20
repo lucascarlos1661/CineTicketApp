@@ -79,16 +79,6 @@ class ChooseSeat : AppCompatActivity() {
                 intent.putExtra("time", time)
                 intent.putExtra("seats", selectedSeats.joinToString(separator = ", "))
                 this.startActivity(intent)
-
-//                val ticketData = Ticket(
-//                    movieTitle = title,
-//                    posterUrl = posterUrl,
-//                    movieRoom = room,
-//                    movieDate = date,
-//                    movieTime = time,
-//                    seats = selectedSeats
-//                )
-//                addTicket(ticketData)
             } else {
                 Toast.makeText(this, "Selecione um assento", Toast.LENGTH_LONG).show()
             }
@@ -117,23 +107,6 @@ class ChooseSeat : AppCompatActivity() {
 
         LocalBroadcastManager.getInstance(this)
             .registerReceiver(mMessageReceiver, IntentFilter("message_subject_intent"))
-    }
-
-    private fun addTicket(ticketData: Ticket) {
-
-        val retrofit = MyRetrofit.instance
-        retrofit?.postTicketApi()?.addTicket(ticketData)?.enqueue(
-            object : Callback<Ticket> {
-                override fun onResponse(call: Call<Ticket>, response: Response<Ticket>) {
-                    val response = response
-                }
-
-                override fun onFailure(call: Call<Ticket>, t: Throwable) {
-                    Toast.makeText(this@ChooseSeat, t.message, Toast.LENGTH_LONG).show()
-                    t.message?.let { Log.e("Err", it) }
-                }
-            }
-        )
     }
 
     private fun showSeeAllDialog() {
