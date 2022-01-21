@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".view.TicketDetails">
+
+    <ImageView
+        android:id="@+id/movie_poster"
+        android:layout_width="170dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/poster_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lexenddeca_medium"
+        android:gravity="center"
+        android:text="@string/movie_title"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_poster" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_title">
+
+        <TextView
+            android:id="@+id/room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lexenddeca_light"
+            android:text="@string/txt_room_choose_seat"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/movie_title"
+            app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+        <TextView
+            android:id="@+id/movie_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/lexenddeca_light"
+            android:text="@string/text_number_room"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/room"
+            app:layout_constraintTop_toTopOf="@+id/room" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/lexenddeca_light"
+            android:text="@string/txt_separator_choose_seat"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/movie_room"
+            app:layout_constraintTop_toTopOf="@+id/movie_room" />
+
+        <TextView
+            android:id="@+id/movie_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/lexenddeca_light"
+            android:text="@string/txt_movie_full_date"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/separator"
+            app:layout_constraintTop_toTopOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/separator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/lexenddeca_light"
+            android:text="@string/txt_separator_choose_seat"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/movie_date"
+            app:layout_constraintTop_toTopOf="@+id/movie_date" />
+
+        <TextView
+            android:id="@+id/movie_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/lexenddeca_light"
+            android:text="@string/txt_schedule"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/separator2"
+            app:layout_constraintTop_toTopOf="@+id/separator2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:text="@string/txt_seat"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/linear"
+        app:layout_constraintStart_toStartOf="@id/linear"
+        app:layout_constraintTop_toBottomOf="@id/linear" />
+
+    <TextView
+        android:id="@+id/movie_seats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/lexenddeca_light"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/linear"
+        app:layout_constraintStart_toStartOf="@id/linear"
+        app:layout_constraintTop_toBottomOf="@id/seat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

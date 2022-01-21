@@ -14,6 +14,9 @@
         android:theme="@style/Theme.CineTicket"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".view.TicketDetails"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".view.ChooseTicketType"
             android:screenOrientation="portrait" />
         <activity
