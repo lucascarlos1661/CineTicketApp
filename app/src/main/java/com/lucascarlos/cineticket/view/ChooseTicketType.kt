@@ -2,6 +2,7 @@ package com.lucascarlos.cineticket.view
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,12 +12,14 @@ import android.widget.TextView
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.google.android.material.button.MaterialButton
+import com.google.gson.Gson
 import com.lucascarlos.cineticket.R
 import com.lucascarlos.cineticket.api.MyRetrofit
 import com.lucascarlos.cineticket.model.Ticket
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlin.math.log
 
 class ChooseTicketType : AppCompatActivity() {
 
@@ -139,7 +142,15 @@ class ChooseTicketType : AppCompatActivity() {
         retrofit?.postTicketApi()?.addTicket(ticketData)?.enqueue(
             object : Callback<Ticket> {
                 override fun onResponse(call: Call<Ticket>, response: Response<Ticket>) {
-                    val response = response
+
+                    val gson = Gson()
+                    val jsonTicket = gson.toJson(ticketData)
+
+                    val intent = Intent(this@ChooseTicketType, TicketDetails::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                    intent.putExtra("ticket", jsonTicket)
+                    intent.putExtra("route", "newTicket")
+                    startActivity(intent)
                 }
 
                 override fun onFailure(call: Call<Ticket>, t: Throwable) {
