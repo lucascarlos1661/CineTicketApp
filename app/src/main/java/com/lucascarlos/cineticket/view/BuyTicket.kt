@@ -36,11 +36,13 @@ class BuyTicket : AppCompatActivity() {
     private var selectedDate: String = ""
     lateinit var progressBar: ProgressBar
 
+    private var movieId: String? = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_buy_ticket)
 
-        val movieId = intent.getStringExtra("movieId")
+        movieId = intent.getStringExtra("movieId")
         val bannerUrl = intent.getStringExtra("bannerUrl")
         val storyLine = intent.getStringExtra("movieStoryLine")
         val posterUrl = intent.getStringExtra("posterUrl")
@@ -76,9 +78,7 @@ class BuyTicket : AppCompatActivity() {
         recycleDates = findViewById(R.id.recycleDates)
         recycleDates.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        if (movieId != null) {
-            getData(movieId)
-        }
+        movieId?.let { getData(it) }
 
         readMore = findViewById(R.id.read_more)
 
@@ -110,7 +110,8 @@ class BuyTicket : AppCompatActivity() {
                     roomsList = roomsList + i.rooms
                 }
 
-                val adapter = title?.let { RoomAdapter(this@BuyTicket, roomsList, fullDate, it, posterUrl) }
+                val adapter =
+                    title?.let { RoomAdapter(this@BuyTicket, roomsList, fullDate, it, posterUrl) }
                 recycleRooms.adapter = adapter
             }
         }
@@ -142,5 +143,11 @@ class BuyTicket : AppCompatActivity() {
             }
 
         })
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        daysList = emptyList()
+        movieId?.let { getData(it) }
     }
 }
