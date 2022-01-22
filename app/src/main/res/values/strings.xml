@@ -58,4 +58,5 @@
     <string name="txt_half_value">R$ 12,00</string>
     <string name="txt_confirm">Confirmar</string>
     <string name="txt_toast_select_seat_type">Selecione o tipo de assento</string>
+    <string name="ticket_reserved">Ingresso reservado</string>
 </resources>

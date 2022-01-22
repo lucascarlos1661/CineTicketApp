@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
 import com.lucascarlos.cineticket.R
 import com.lucascarlos.cineticket.api.MyRetrofit
 import com.lucascarlos.cineticket.model.Ticket
@@ -18,6 +19,7 @@ import retrofit2.Response
 class MyTickets : Fragment(R.layout.activity_my_tickets) {
 
     lateinit var recyclerTickets: RecyclerView
+    private var data: List<Ticket> = emptyList()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -33,8 +35,9 @@ class MyTickets : Fragment(R.layout.activity_my_tickets) {
             MyRetrofit.instance?.getTicketApi()?.getTicketsApi() as Call<List<Ticket>>
         call.enqueue(object : Callback<List<Ticket>> {
             override fun onResponse(call: Call<List<Ticket>>, response: Response<List<Ticket>>) {
+                data = response.body()?.toList()!!
                 val adapter =
-                    TicketsAdapter(requireContext(), response.body()?.toList() as List<Ticket>)
+                    TicketsAdapter(requireContext(), data)
                 recyclerTickets.adapter = adapter
             }
 
@@ -44,5 +47,11 @@ class MyTickets : Fragment(R.layout.activity_my_tickets) {
             }
 
         })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        data = emptyList()
+        getData()
     }
 }
