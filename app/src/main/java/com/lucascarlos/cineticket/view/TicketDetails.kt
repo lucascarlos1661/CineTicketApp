@@ -19,18 +19,7 @@ class TicketDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ticket_details)
 
-
         val response = intent.getStringExtra("ticket")
-        val route: String? = intent.getStringExtra("route")
-
-        if (route == "newTicket") {
-            Snackbar.make(
-                findViewById(android.R.id.content),
-                "Ingresso reservado",
-                Snackbar.LENGTH_LONG
-            )
-                .show()
-        }
 
         val gson = Gson()
         val ticket: Ticket = gson.fromJson(response, Ticket::class.java)
@@ -41,6 +30,7 @@ class TicketDetails : AppCompatActivity() {
         val movieDate: TextView = findViewById(R.id.movie_date)
         val movieTime: TextView = findViewById(R.id.movie_time)
         val movieSeats: TextView = findViewById(R.id.movie_seats)
+        val btnBack: ImageView = findViewById(R.id.btn_back)
 
         movieTitle.text = ticket.movieTitle
         Glide.with(this).load(ticket.posterUrl).into(moviePoster)
@@ -48,9 +38,9 @@ class TicketDetails : AppCompatActivity() {
         movieRoom.text = ticket.movieRoom
         movieTime.text = ticket.movieTime
         movieSeats.text = ticket.seats.joinToString(separator = ",")
-    }
 
-    private fun showSnackbar() {
-
+        btnBack.setOnClickListener{
+            this.finish()
+        }
     }
 }

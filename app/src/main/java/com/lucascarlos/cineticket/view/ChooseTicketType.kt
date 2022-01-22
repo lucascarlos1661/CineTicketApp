@@ -142,13 +142,9 @@ class ChooseTicketType : AppCompatActivity() {
         retrofit?.postTicketApi()?.addTicket(ticketData)?.enqueue(
             object : Callback<Ticket> {
                 override fun onResponse(call: Call<Ticket>, response: Response<Ticket>) {
-
-                    val gson = Gson()
-                    val jsonTicket = gson.toJson(ticketData)
-
-                    val intent = Intent(this@ChooseTicketType, TicketDetails::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-                    intent.putExtra("ticket", jsonTicket)
+                    val intent = Intent(this@ChooseTicketType, MainActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     intent.putExtra("route", "newTicket")
                     startActivity(intent)
                 }
