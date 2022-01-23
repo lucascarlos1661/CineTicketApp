@@ -11,6 +11,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
+import com.lucascarlos.cineticket.adapters.SeatsAdapter
 import com.lucascarlos.cineticket.api.MyRetrofit
 import com.lucascarlos.cineticket.model.*
 import retrofit2.Call

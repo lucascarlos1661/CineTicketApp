@@ -1,4 +1,4 @@
-package com.lucascarlos.cineticket.model
+package com.lucascarlos.cineticket.adapters
 
 import android.content.Context
 import android.content.Intent
@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
+import com.lucascarlos.cineticket.model.Days
 
 class DaysAdapter(private val context: Context, private val datesList: List<Days>) :
     RecyclerView.Adapter<DaysViewHolder>() {

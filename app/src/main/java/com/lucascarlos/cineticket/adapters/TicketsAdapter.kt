@@ -1,4 +1,4 @@
-package com.lucascarlos.cineticket.model
+package com.lucascarlos.cineticket.adapters
 
 import android.content.Context
 import android.content.Intent
@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.lucascarlos.cineticket.R
+import com.lucascarlos.cineticket.model.SeatType
+import com.lucascarlos.cineticket.model.Ticket
 import com.lucascarlos.cineticket.view.TicketDetails
 
 class TicketsAdapter(

@@ -1,6 +1,5 @@
 package com.lucascarlos.cineticket.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -8,12 +7,11 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
 import com.lucascarlos.cineticket.api.MyRetrofit
 import com.lucascarlos.cineticket.model.Movies
-import com.lucascarlos.cineticket.model.MoviesAdapter
+import com.lucascarlos.cineticket.adapters.MoviesAdapter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

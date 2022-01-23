@@ -1,4 +1,4 @@
-package com.lucascarlos.cineticket.model
+package com.lucascarlos.cineticket.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lucascarlos.cineticket.R
+import com.lucascarlos.cineticket.model.Rooms
 
 class RoomAdapter(
     private val context: Context,

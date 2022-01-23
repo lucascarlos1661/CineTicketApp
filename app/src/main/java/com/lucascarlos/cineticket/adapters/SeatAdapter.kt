@@ -1,4 +1,4 @@
-package com.lucascarlos.cineticket.model
+package com.lucascarlos.cineticket.adapters
 
 import android.content.Context
 import android.content.Intent
