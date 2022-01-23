@@ -112,7 +112,7 @@
         app:layout_constraintTop_toTopOf="@+id/separator2" />
 
     <TextView
-        android:id="@+id/seat"
+        android:id="@+id/txt_seat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
@@ -134,7 +134,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/movie_title"
-        app:layout_constraintTop_toBottomOf="@id/seat" />
+        app:layout_constraintTop_toBottomOf="@id/txt_seat" />
 
     <TextView
         android:id="@+id/see_all"

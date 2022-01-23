@@ -44,7 +44,11 @@ class TicketsAdapter(
                 movieRoom = item.movieRoom,
                 movieDate = item.movieDate,
                 movieTime = item.movieTime,
-                seats = item.seats
+                seats = item.seats,
+                seatType = SeatType(
+                    item.seatType.entire,
+                    item.seatType.half
+                )
             )
 
             val gson = Gson()

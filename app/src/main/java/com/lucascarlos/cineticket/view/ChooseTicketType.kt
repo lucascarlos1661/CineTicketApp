@@ -15,6 +15,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.gson.Gson
 import com.lucascarlos.cineticket.R
 import com.lucascarlos.cineticket.api.MyRetrofit
+import com.lucascarlos.cineticket.model.SeatType
 import com.lucascarlos.cineticket.model.Ticket
 import retrofit2.Call
 import retrofit2.Callback
@@ -124,7 +125,11 @@ class ChooseTicketType : AppCompatActivity() {
                     movieRoom = room,
                     movieDate = date,
                     movieTime = time,
-                    seats = seatsList!!
+                    seats = seatsList!!,
+                    seatType = SeatType(
+                        quantityCounterEntire.text.toString(),
+                        quantityCounterHalf.text.toString()
+                    )
                 )
                 saveTicket(ticketData)
             } else {

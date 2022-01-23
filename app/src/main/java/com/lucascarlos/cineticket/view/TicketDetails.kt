@@ -30,6 +30,8 @@ class TicketDetails : AppCompatActivity() {
         val movieDate: TextView = findViewById(R.id.movie_date)
         val movieTime: TextView = findViewById(R.id.movie_time)
         val movieSeats: TextView = findViewById(R.id.movie_seats)
+        val countEntire: TextView = findViewById(R.id.count_entire)
+        val countHalf: TextView = findViewById(R.id.count_half)
         val btnBack: ImageView = findViewById(R.id.btn_back)
 
         movieTitle.text = ticket.movieTitle
@@ -38,8 +40,11 @@ class TicketDetails : AppCompatActivity() {
         movieRoom.text = ticket.movieRoom
         movieTime.text = ticket.movieTime
         movieSeats.text = ticket.seats.joinToString(separator = ",")
+        countEntire.text = ticket.seatType.entire
+        countHalf.text = ticket.seatType.half
 
-        btnBack.setOnClickListener{
+
+        btnBack.setOnClickListener {
             this.finish()
         }
     }

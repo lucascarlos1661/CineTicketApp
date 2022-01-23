@@ -59,4 +59,6 @@
     <string name="txt_confirm">Confirmar</string>
     <string name="txt_toast_select_seat_type">Selecione o tipo de assento</string>
     <string name="ticket_reserved">Ingresso reservado</string>
+    <string name="txt_entire_ticket">Inteira:</string>
+    <string name="txt_half_ticket">Meia:</string>
 </resources>

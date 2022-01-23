@@ -14,5 +14,14 @@ data class Ticket(
     @SerializedName("movieTime")
     val movieTime: String?,
     @SerializedName("seats")
-    val seats: List<String>
+    val seats: List<String>,
+    @SerializedName("seatsType")
+    val seatType: SeatType
+)
+
+data class SeatType(
+    @SerializedName("entire")
+    val entire: String,
+    @SerializedName("half")
+    val half: String
 )
