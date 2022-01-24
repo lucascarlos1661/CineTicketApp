@@ -1,0 +1,2919 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Homem-Aranha - Sem volta para casa",
+      "runTime": "02h28",
+      "genre": "Ação",
+      "rating": "4,9",
+      "age": "12 anos",
+      "storyLine": "O herói amigo da vizinhança é desmascarado e não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói. Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos, e o forçam a descobrir o que realmente significa ser o Homem-Aranha.",
+      "posterUrl": "https://img.veloxtickets.com/content/titulos/evento/homem-aranha-sem-volta-para-casa_14299_evento.jpg?21111942",
+      "bannerUrl": "https://nerdside.net/wp-content/uploads/2021/06/oficial-teaser-homem-aranha-3-s.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Matrix Resurrections",
+      "runTime": "02h28",
+      "genre": "Ficção",
+      "rating": "4,5",
+      "age": "14 anos",
+      "storyLine": "Matrix: Resurrections é o novo filme da franquia Matrix, continuando a saga de Neo (Keanu Reeves) em sua busca pela libertação das pessoas aprisionadas mentalmente pelas máquinas. Em um mundo de duas realidades - a vida cotidiana e o que está por trás dela - Thomas Anderson terá que escolher seguir o coelho branco mais uma vez. A escolha, embora seja uma ilusão, ainda é a única maneira de entrar ou sair da Matrix, que é mais forte, mais segura e mais perigosa do que nunca.",
+      "posterUrl": "https://img.veloxtickets.com/content/titulos/evento/matrix-resurrections_16109_evento.jpg?21113019",
+      "bannerUrl": "https://ogimg.infoglobo.com.br/in/24958333-c39-11e/FT1086A/matrix.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Sing 2",
+      "runTime": "01h50",
+      "genre": "Animação",
+      "rating": "4,6",
+      "age": "Livre",
+      "storyLine": "Buster Moon e seus amigos devem persuadir o solitário astro do rock Clay Calloway a se juntar a eles para a abertura de um novo show.",
+      "posterUrl": "https://img.veloxtickets.com/content/titulos/evento/sing-2_14627_evento.jpg?21120632",
+      "bannerUrl": "http://images6.fanpop.com/image/photos/43900000/Sing-2-Banner-sing-2-43989181-1200-647.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Turma da Mônica - Lições",
+      "runTime": "1h30",
+      "genre": "Aventura",
+      "rating": "4,7",
+      "age": "Livre",
+      "storyLine": "Mônica, Cebolinha, Magali e Cascão fogem da escola. Agora, terão que encarar as suas consequências, e elas não serão poucas. Nesta nova jornada, a turma descobrirá o real valor e sentido da palavra amizade. ",
+      "posterUrl": "https://img.veloxtickets.com/content/titulos/evento/turma-da-monica-licoes_14301_evento.jpg?21122423",
+      "bannerUrl": "https://i2.wp.com/tropanerd.com/wp-content/uploads/2021/06/Turma-da-Monica-Lacos.jpg?resize=800%2C445&ssl=1"
+    },
+    {
+      "id": 5,
+      "title": "Kings Man - A Origem",
+      "runTime": "2h11",
+      "genre": "Ação",
+      "rating": "4,5",
+      "age": "16 anos",
+      "storyLine": "Spin-off da franquia Kingsman, que explora a agência de espionagem na virada do século XX. Enquanto um grupo formado pelos piores tiranos e gênios do crime se reúne para planejar uma guerra que fará milhões desaparecerem, um homem deve correr contra o tempo para detê-los.",
+      "posterUrl": "https://img.veloxtickets.com/content/titulos/evento/king-s-man-a-origem_9369_evento.jpg?22014555",
+      "bannerUrl": "https://www.folhadelondrina.com.br/img/inline/3140000/Kings-Man-A-Origem-comedia-rasteira-faz-pastiche-d0314990800202201061539.jpg?xid=5556228"
+    }
+  ],
+  "tickets": [
+    {
+      "movieTitle": "Homem-Aranha - Sem volta para casa",
+      "posterUrl": "https://img.veloxtickets.com/content/titulos/evento/homem-aranha-sem-volta-para-casa_14299_evento.jpg?21111942",
+      "movieRoom": "02",
+      "movieDate": "17/01/2022",
+      "movieTime": "19:00",
+      "seats": [
+        "A1",
+        "A2"
+      ],
+      "seatsType": {
+        "entire": "1",
+        "half": "1"
+      },
+      "id": 1
+    }
+  ],
+  "comingSoon": [
+    {
+      "id": 1,
+      "title": "Pânico",
+      "releaseDate": "13/01/2022",
+      "runTime": "1h54",
+      "genre": "Terror",
+      "age": "16 anos",
+      "storyLine": "O ícone do terror nos anos 90 está de volta aos cinemas e dessa vez todos que estão próximos são suspeitos. Quem será o assassino dessa vez?",
+      "posterUrl": "https://moviecom.com.br/site/wp-content/uploads/2021/12/panico-novo-cartaz-260x385.jpg",
+      "bannerUrl": "https://cinebuzz.uol.com.br/media/uploads/scream.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Juntos e Enrolados",
+      "releaseDate": "13/01/2022",
+      "runTime": "02h28",
+      "genre": "Comédia",
+      "age": "Livre",
+      "storyLine": "Após dois anos juntos, Júlio (Rafael Portugal) e Daiana (Cacau Protásio) finalmente conseguem economizar o suficiente para realizar a tão sonhada festa de casamento. O grande dia chegou! Mas pouco antes da cerimônia, uma mensagem no celular do noivo acabou enrolando todos os planos. O casamento pode até ser cancelado, mas a festa não pode parar!",
+      "posterUrl": "https://moviecom.com.br/site/wp-content/uploads/2021/10/Juntos_e_Enrolados_Poster_3-260x385.jpg",
+      "bannerUrl": "https://globofilmes.globo.com/uploads/2020/12/juntos-e-enrolados.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Eduardo e Mônica",
+      "releaseDate": "20/01/2022",
+      "runTime": "1h50",
+      "genre": "Comédia Romântica",
+      "age": "14 anos",
+      "storyLine": "“Quem um dia irá dizer que não existe razão nas coisas feitas pelo coração…”. O romance de um casal muito diferente, mas que nasceu um para o outro. A história de amor que embalou gerações, composta por Renato Russo, o mais emblemático casal da música brasileira chegará aos cinemas e promete emocionar os jovens de todas as idades.",
+      "posterUrl": "https://moviecom.com.br/site/wp-content/uploads/2021/12/eduardo-monica-260x385.jpg",
+      "bannerUrl": "https://portalpopline.com.br/wp-content/uploads/2019/01/eduardo-e-m%C3%B4nica-filme.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Batman",
+      "releaseDate": "03/03/2022",
+      "runTime": "2h13",
+      "genre": "Ação",
+      "age": "14 anos",
+      "storyLine": "Da Warner Bros. Pictures chega THE BATMAN com o realizador Matt Reeves no comando e protagonizado por Robert Pattinson no duplo papel de detetive de Gotham City e do seu alter ego, o bilionário solitário Bruce Wayne.",
+      "posterUrl": "https://moviecom.com.br/site/wp-content/uploads/2021/10/the-batman-260x385.jpg",
+      "bannerUrl": "https://www.uniaofm.com.br/wp-content/uploads/2021/12/legiao_qrix6QtHXO9d.jpg.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Morbius",
+      "releaseDate": "31/03/2022",
+      "runTime": "1h48",
+      "genre": "Ação",
+      "age": "14 anos",
+      "storyLine": "Com uma rara doença no sangue, e determinado a salvar outras pessoas com esse mesmo destino, Dr. Michael Morbius tenta uma aposta extrema e acaba infectando a si mesmo com um tipo de vampirismo. O que antes parecia um grande sucesso se revelou como uma solução pior que a doença.",
+      "posterUrl": "https://moviecom.com.br/site/wp-content/uploads/2020/01/morbius-em-breve-260x385.jpg",
+      "bannerUrl": "https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q80/wp-content/uploads/2021/06/legiao_GN5ayuj0lsvp.png.jpeg"
+    }
+  ],
+  "dates": [
+    {
+      "movieId": "1",
+      "days": [
+        {
+          "date": "6",
+          "fullDate": "06/01/2022",
+          "weekday": "Qui",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "7",
+          "fullDate": "07/01/2022",
+          "weekday": "Sex",
+          "rooms": [
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "16:40",
+                "21:10"
+              ]
+            },
+            {
+              "number": "06",
+              "audio": "Dublado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "8",
+          "fullDate": "08/01/2022",
+          "weekday": "Sáb",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:40",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "9",
+          "fullDate": "09/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "10",
+          "fullDate": "10/01/2022",
+          "weekday": "Seg",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:20"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "11",
+          "fullDate": "11/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "12",
+          "fullDate": "12/01/2022",
+          "weekday": "Qua",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "movieId": "2",
+      "days": [
+        {
+          "date": "6",
+          "fullDate": "06/01/2022",
+          "weekday": "Qui",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "7",
+          "fullDate": "07/01/2022",
+          "weekday": "Sex",
+          "rooms": [
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "16:40",
+                "21:10"
+              ]
+            },
+            {
+              "number": "06",
+              "audio": "Dublado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "8",
+          "fullDate": "08/01/2022",
+          "weekday": "Sáb",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:40",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "9",
+          "fullDate": "09/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "10",
+          "fullDate": "10/01/2022",
+          "weekday": "Seg",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:20"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "11",
+          "fullDate": "11/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "12",
+          "fullDate": "12/01/2022",
+          "weekday": "Qua",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "movieId": "3",
+      "days": [
+        {
+          "date": "6",
+          "fullDate": "06/01/2022",
+          "weekday": "Qui",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "7",
+          "fullDate": "07/01/2022",
+          "weekday": "Sex",
+          "rooms": [
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "16:40",
+                "21:10"
+              ]
+            },
+            {
+              "number": "06",
+              "audio": "Dublado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "8",
+          "fullDate": "08/01/2022",
+          "weekday": "Sáb",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:40",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "9",
+          "fullDate": "09/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "10",
+          "fullDate": "10/01/2022",
+          "weekday": "Seg",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:20"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "11",
+          "fullDate": "11/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "12",
+          "fullDate": "12/01/2022",
+          "weekday": "Qua",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "movieId": "4",
+      "days": [
+        {
+          "date": "6",
+          "fullDate": "06/01/2022",
+          "weekday": "Qui",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "7",
+          "fullDate": "07/01/2022",
+          "weekday": "Sex",
+          "rooms": [
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "16:40",
+                "21:10"
+              ]
+            },
+            {
+              "number": "06",
+              "audio": "Dublado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "8",
+          "fullDate": "08/01/2022",
+          "weekday": "Sáb",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:40",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "9",
+          "fullDate": "09/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "10",
+          "fullDate": "10/01/2022",
+          "weekday": "Seg",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:20"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "11",
+          "fullDate": "11/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "12",
+          "fullDate": "12/01/2022",
+          "weekday": "Qua",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "movieId": "5",
+      "days": [
+        {
+          "date": "6",
+          "fullDate": "06/01/2022",
+          "weekday": "Qui",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "7",
+          "fullDate": "07/01/2022",
+          "weekday": "Sex",
+          "rooms": [
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "16:40",
+                "21:10"
+              ]
+            },
+            {
+              "number": "06",
+              "audio": "Dublado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "8",
+          "fullDate": "08/01/2022",
+          "weekday": "Sáb",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:40",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "9",
+          "fullDate": "09/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "10",
+          "fullDate": "10/01/2022",
+          "weekday": "Seg",
+          "rooms": [
+            {
+              "number": "03",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "17:20"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "11",
+          "fullDate": "11/01/2022",
+          "weekday": "Dom",
+          "rooms": [
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "18:00",
+                "21:10"
+              ]
+            },
+            {
+              "number": "05",
+              "audio": "Legendado",
+              "schedules": [
+                "15:00",
+                "19:00"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "12",
+          "fullDate": "12/01/2022",
+          "weekday": "Qua",
+          "rooms": [
+            {
+              "number": "02",
+              "audio": "Dublado",
+              "schedules": [
+                "14:10",
+                "20:10"
+              ]
+            },
+            {
+              "number": "04",
+              "audio": "Legendado",
+              "schedules": [
+                "21:10"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "movieSeats": [
+    {
+      "room": "02",
+      "seats": [
+        {
+          "y": "L",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "K",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "false",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "J",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "I",
+          "seat": [
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "H",
+          "seat": [
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "G",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "F",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "E",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "D",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "C",
+          "seat": [
+            "null",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "B",
+          "seat": [
+            "null",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "A",
+          "seat": [
+            "null",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "room": "03",
+      "seats": [
+        {
+          "y": "N",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "M",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "L",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "K",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "false",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "J",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "I",
+          "seat": [
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "H",
+          "seat": [
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "G",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "F",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "E",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "D",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "C",
+          "seat": [
+            "null",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "B",
+          "seat": [
+            "null",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "A",
+          "seat": [
+            "null",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "room": "04",
+      "seats": [
+        {
+          "y": "L",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "null",
+            "null",
+            "null",
+            "false",
+            "false",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "K",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "false",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "J",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "I",
+          "seat": [
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "H",
+          "seat": [
+            "false",
+            "false",
+            "false",
+            "false",
+            "null",
+            "null",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "G",
+          "seat": [
+            "false",
+            "false",
+            "false",
+            "false",
+            "null",
+            "null",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "F",
+          "seat": [
+            "true",
+            "true",
+            "false",
+            "false",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "E",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "D",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "false",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "C",
+          "seat": [
+            "null",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "B",
+          "seat": [
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "A",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        }
+      ]
+    },
+    {
+      "room": "05",
+      "seats": [
+        {
+          "y": "N",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "true"
+          ]
+        },
+        {
+          "y": "M",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "L",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "true"
+          ]
+        },
+        {
+          "y": "K",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "false",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "J",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "I",
+          "seat": [
+            "false",
+            "false",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "H",
+          "seat": [
+            "false",
+            "false",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "false",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "G",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "F",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "E",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "D",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "C",
+          "seat": [
+            "null",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "B",
+          "seat": [
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "A",
+          "seat": [
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null"
+          ]
+        }
+      ]
+    },
+    {
+      "room": "06",
+      "seats": [
+        {
+          "y": "L",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "true",
+            "false",
+            "true",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "K",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "false",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "J",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "false",
+            "false",
+            "true"
+          ]
+        },
+        {
+          "y": "I",
+          "seat": [
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "H",
+          "seat": [
+            "false",
+            "false",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true"
+          ]
+        },
+        {
+          "y": "G",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "F",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "false",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "E",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "true",
+            "false",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "D",
+          "seat": [
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "C",
+          "seat": [
+            "null",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "true",
+            "true",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "false",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "B",
+          "seat": [
+            "null",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null"
+          ]
+        },
+        {
+          "y": "A",
+          "seat": [
+            "null",
+            "null",
+            "null",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "true",
+            "null",
+            "null"
+          ]
+        }
+      ]
+    }
+  ]
+}
