@@ -26,6 +26,12 @@ Após isso, é preciso iniciar o servidor para ouvir as requisições:
 ```
 json-server --host 192.168.1.16 database.json
 ```
-O endereço IP no comando deve ser substituído pelo IP do computador local, e também deve ser alterado na variável **BASE_URL** no arquivo *MyRetrofit.kt* no  caminho: *app/src/main/java/com/lucascarlos/cineticket/api/*.
+O endereço IP no comando deve ser substituído pelo IP do computador local, e também deve ser alterado na variável **BASE_URL** no arquivo *MyRetrofit.kt* no  caminho: *app/src/main/java/com/lucascarlos/cineticket/api/*
 
 O arquivo **database.json** está disponível no caminho: *app/src/*
+
+## Observações
+Pelo back-end ter sido feito utilizando json-server de forma a facilitar os testes e agilizar o processo de desenvolvimento do app (que nesse projeto empenhei mais foco), algumas funções que dependiam de um back-end mais completo não foram implementadas, como:
+ - Autenticação de usuário.
+ - Mapas de assentos diferentes para cada sala, sessão, horário e filme. (Para facilitar o desenvolvimento separei apenas por sala, de modo que cada sala possui um mapa diferente).
+ - Quando o usuário reserva um ingresso, aquele assento ter status alterado para indisponível.
